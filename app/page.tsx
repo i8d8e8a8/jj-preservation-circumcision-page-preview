@@ -461,60 +461,87 @@ export default function Home() {
       </section>
 
       <section id="preservation" className="section preservation-section">
-        <div className="shell preservation-grid">
-          <div>
-            <SectionHeading
-              eyebrow="THE CORE PRINCIPLE"
-              title={
-                <>
-                  왜 <em>보존</em>이
-                  <br />
-                  중요할까요?
-                </>
-              }
-              description="피부 아래에는 감각과 회복에 관여하는 미세혈관과 신경 조직이 분포합니다. 필요한 피부만 정교하게 다루고 핵심 구조를 존중하는 것이 보존 수술의 출발점입니다."
-              inverse
-            />
-            <div className="preserve-points">
-              <div>
-                <span>01</span>
-                <p>미세혈관과 신경 조직 손상 최소화 지향</p>
-              </div>
-              <div>
-                <span>02</span>
-                <p>개인별 피부 여유도에 맞춘 절제 범위</p>
-              </div>
-              <div>
-                <span>03</span>
-                <p>기능과 자연스러운 라인을 함께 고려</p>
+        <div className="shell">
+          <div className="preservation-intro-grid">
+            <div>
+              <SectionHeading
+                eyebrow="THE CORE PRINCIPLE"
+                title={
+                  <>
+                    표재근막 보존
+                    <br />
+                    수술이란?
+                  </>
+                }
+                description="음경 피부 바로 아래에는 다토스 근막(Dartos fascia)이라 불리는 표재근막층이 있습니다. 이 층에는 얕은 혈관·림프관·신경과 평활근 섬유가 분포하며 피부의 이동성과 탄성에 관여합니다."
+                inverse
+              />
+            </div>
+            <div className="preservation-principle">
+              <p>
+                보존 디자인은 계획된 범위의 피부와 진피를 절제하면서, 절제선
+                아래의 표재근막은 가능한 한 확인하고 남기는 것을 목표로 합니다.
+              </p>
+              <div className="preserve-points">
+                <div>
+                  <span>01</span>
+                  <p>피부·진피와 근막층을 구분해 절제 깊이를 계획</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <p>청록색 표재근막층을 보존하는 방향으로 접근</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <p>포피 길이·유착·염증·흉터 상태를 개인별로 반영</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div className="anatomy-card">
-            <div className="anatomy-badge">DARTOS FASCIA</div>
-            <div className="anatomy-visual">
-              <Image
-                src={`${ASSET_BASE}/medical/superficial-fascia-preservation-v2.webp`}
-                alt="피부와 진피는 선택적으로 절제하고 그 아래 표재근막과 미세혈관·신경 조직은 보존하는 원리를 보여주는 단면 의료 도식"
-                fill
-                sizes="(max-width: 760px) 100vw, 55vw"
-                className="fascia-medical-image"
-              />
-              <span className="treatment-label">피부·진피 선택 절제 범위</span>
-              <div className="anatomy-legend">
-                <span className="legend-skin">피부·진피 절제층</span>
-                <span className="legend-fascia">표재근막 보존</span>
-                <span className="legend-vessel">미세혈관·신경망</span>
+            <div className="anatomy-card-head">
+              <div>
+                <span className="anatomy-badge">ANATOMICAL LAYER COMPARISON</span>
+                <h3>어떤 층을 절제하고, 어떤 층을 남기는가</h3>
+              </div>
+              <div className="anatomy-legend" aria-label="해부학적 층 색상 범례">
+                <span className="legend-skin">피부·진피</span>
+                <span className="legend-fascia">표재근막</span>
+                <span className="legend-deep">심부근막</span>
+                <span className="legend-cavernosa">해면체·요도</span>
               </div>
             </div>
-            <div className="anatomy-copy">
-              <h3>표재근막 보존 포경수술</h3>
-              <p>
-                필요한 범위의 피부와 진피층은 깔끔하게 절제하되, 그 아래의
-                표재근막(Dartos fascia)은 가능한 보존하여 미세혈관과 신경
-                조직에 대한 불필요한 손상을 줄이는 수술 원칙입니다.
-              </p>
+            <div className="anatomy-visual">
+              <Image
+                src={`${ASSET_BASE}/medical/circumcision-layer-comparison-v3.png`}
+                alt="왼쪽 일반적인 깊은 절제 예시, 가운데 음경 횡단면, 오른쪽 피부와 진피만 들어 올리고 표재근막을 남긴 보존 절제 예시를 비교한 의료 도식"
+                fill
+                sizes="(max-width: 760px) 100vw, 1160px"
+                className="fascia-medical-image"
+              />
             </div>
+            <div className="anatomy-comparison-copy">
+              <article>
+                <span>01</span>
+                <h4>일반적인 깊은 절제 예시</h4>
+                <p>피부·진피와 함께 표재근막층까지 절제되는 단면 예시입니다.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h4>음경 횡단면</h4>
+                <p>피부 아래 표재근막과 심부근막, 내부 해면체 구조의 위치 관계를 보여줍니다.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h4>표재근막 보존 중심 절제</h4>
+                <p>피부·진피를 계획 범위에서 절제하고 청록색 표재근막층은 남기는 방향입니다.</p>
+              </article>
+            </div>
+            <p className="anatomy-caveat">
+              그림은 층위 이해를 위한 도식입니다. 실제 절제 범위와 보존 가능 범위는
+              개인의 해부학적 상태와 수술 중 소견에 따라 달라질 수 있습니다.
+            </p>
           </div>
         </div>
       </section>
