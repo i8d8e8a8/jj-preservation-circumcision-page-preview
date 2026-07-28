@@ -229,7 +229,7 @@ export default function Home() {
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
-            src={`${ASSET_BASE}/doctor-procedure-skyblue-v8.webp`}
+            src={`${ASSET_BASE}/hero-preservation-fascia-v9.webp`}
             alt=""
             fill
             priority
@@ -265,19 +265,19 @@ export default function Home() {
             <p className="privacy-note">전 직원 남성 의료진 · 1:1 비밀 상담</p>
           </div>
         </div>
-        <div className="hero-proof">
+        <div className="hero-proof" aria-label="보존 디자인 포경수술의 핵심 원칙">
           <div className="shell proof-grid">
             <div>
-              <strong>20+</strong>
-              <span>남성수술 임상경력</span>
+              <strong>개인별 해부학적 디자인</strong>
+              <span>절제 위치와 피부 여유도를 세밀하게 설계합니다</span>
             </div>
             <div>
-              <strong>10,000+</strong>
-              <span>누적 시술 경험</span>
+              <strong>표재근막 보존 중심</strong>
+              <span>피부와 진피를 선택적으로 절제해 중요 조직층을 남깁니다</span>
             </div>
             <div>
-              <strong>98%+</strong>
-              <span>환자 만족도</span>
+              <strong>미세 봉합·회복 관리</strong>
+              <span>섬세한 봉합과 개인별 회복 과정을 함께 살핍니다</span>
             </div>
           </div>
         </div>
@@ -817,12 +817,12 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-procedure-skyblue-v8.webp`}
+              src={`${ASSET_BASE}/doctor-philosophy-original-v10.png`}
               alt="어두운 수술실에서 전기 소작기 핸드피스로 정밀 수술을 진행하는 강태진 대표원장"
               fill
               sizes="(max-width: 760px) 100vw, 44vw"
             />
-            <span>남성수술 20년 이상</span>
+            <span>정밀한 수술 · 세심한 보존</span>
           </div>
           <div className="doctor-copy">
             <p className="eyebrow">DIRECTOR&apos;S PHILOSOPHY</p>
