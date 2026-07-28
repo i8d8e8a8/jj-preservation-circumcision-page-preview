@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const KAKAO_URL = "https://pf.kakao.com/_qYlyV";
 const PHONE_HREF = "tel:1599-5952";
+const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const designs = [
   {
@@ -99,7 +100,7 @@ export default function Home() {
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label="JJ비뇨기과 포경수술 페이지 상단">
             <Image
-              src="/brand/jj-horizontal.png"
+              src={`${ASSET_BASE}/brand/jj-horizontal.png`}
               alt="JJ비뇨기과"
               width={170}
               height={44}
@@ -121,7 +122,7 @@ export default function Home() {
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
-            src="/doctor/consultation-medical.png"
+            src={`${ASSET_BASE}/doctor/consultation-medical.png`}
             alt=""
             fill
             priority
@@ -147,7 +148,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button primary" href={KAKAO_URL} target="_blank" rel="noreferrer">
-                <Image src="/kakaotalk-icon.png" alt="" width={24} height={24} />
+                <Image src={`${ASSET_BASE}/kakaotalk-icon.png`} alt="" width={24} height={24} />
                 카카오톡 1:1 상담
               </a>
               <a className="button secondary" href={PHONE_HREF}>
@@ -381,7 +382,7 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src="/doctor-procedure-final.png"
+              src={`${ASSET_BASE}/doctor-procedure-final.png`}
               alt="강태진 대표원장"
               fill
               sizes="(max-width: 800px) 100vw, 46vw"
@@ -445,7 +446,7 @@ export default function Home() {
           </p>
           <div className="cta-buttons">
             <a className="button kakao" href={KAKAO_URL} target="_blank" rel="noreferrer">
-              <Image src="/kakaotalk-icon.png" alt="" width={25} height={25} />
+              <Image src={`${ASSET_BASE}/kakaotalk-icon.png`} alt="" width={25} height={25} />
               카카오톡 빠른 상담
             </a>
             <a className="button white" href={PHONE_HREF}>
@@ -458,7 +459,12 @@ export default function Home() {
 
       <footer>
         <div className="shell footer-inner">
-          <Image src="/brand/jj-horizontal.png" alt="JJ비뇨기과" width={150} height={38} />
+          <Image
+            src={`${ASSET_BASE}/brand/jj-horizontal.png`}
+            alt="JJ비뇨기과"
+            width={150}
+            height={38}
+          />
           <p>
             본 페이지의 내용은 일반적인 의료 정보이며, 실제 수술 방법과 회복
             기간은 개인의 상태와 의료진의 판단에 따라 달라질 수 있습니다.
