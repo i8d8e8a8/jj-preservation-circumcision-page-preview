@@ -9,9 +9,24 @@ const designs = [
     code: "L · L",
     title: "Low & Loose",
     label: "낮은 절개선 · 여유 있는 디자인",
-    scar: "흉터 위치가 귀두에 비교적 가까운 편",
-    fit: "피부 여유를 남겨 발기 시 당김 부담을 줄이는 방향",
-    note: "균형형 디자인으로 우선 고려",
+    image: "low-loose.webp",
+    summary:
+      "봉합선은 귀두 가까이에 두면서 피부는 여유 있게 남기는 형태입니다. 흉터가 비교적 안쪽에 자리하고 평상시에는 자연스러운 주름이 남는 것이 특징입니다.",
+    details: [
+      {
+        label: "절개선 위치",
+        value: "귀두 바로 아래쪽에 가까워 봉합선이 비교적 덜 드러나는 편입니다.",
+      },
+      {
+        label: "피부 여유",
+        value: "발기 시 필요한 피부 길이를 충분히 남겨 당김 부담을 줄이는 방향으로 설계합니다.",
+      },
+      {
+        label: "형태적 특징",
+        value: "내측 피부가 과도하게 남지 않으면서도 자연스러운 주름과 움직임을 유지합니다.",
+      },
+    ],
+    note: "귀두가 다시 덮일 가능성과 발기 시 여유도를 함께 고려할 수 있어 JJ비뇨기과에서 우선적으로 설명하는 균형형 디자인입니다.",
     tone: "soft",
     recommended: true,
   },
@@ -19,9 +34,24 @@ const designs = [
     code: "L · T",
     title: "Low & Tight",
     label: "낮은 절개선 · 탄탄한 디자인",
-    scar: "흉터 위치가 귀두에 비교적 가까운 편",
-    fit: "주름이 적고 깔끔한 외형을 선호할 때 고려",
-    note: "피부 여유도가 부족하면 당김이 생길 수 있음",
+    image: "low-tight.webp",
+    summary:
+      "봉합선은 귀두 가까이에 두고 피부 주름은 적게 남기는 형태입니다. 평상시 표면이 매끈하고 정돈되어 보이는 외형을 선호할 때 고려할 수 있습니다.",
+    details: [
+      {
+        label: "절개선 위치",
+        value: "귀두 가까이에 위치해 High 타입보다 봉합선이 안쪽에 자리합니다.",
+      },
+      {
+        label: "피부 여유",
+        value: "피부를 비교적 팽팽하게 맞춰 평상시 주름이 적고 탄탄해 보입니다.",
+      },
+      {
+        label: "형태적 특징",
+        value: "국내에서 흔히 접할 수 있는 형태지만 절제량이 많아지지 않도록 정확한 측정이 중요합니다.",
+      },
+    ],
+    note: "발기 시 길이와 피부 탄력을 충분히 확인하지 않으면 당김이나 불편감이 생길 수 있어 수술 전 여유도 측정이 특히 중요합니다.",
     tone: "tight",
     recommended: false,
   },
@@ -29,9 +59,24 @@ const designs = [
     code: "H · L",
     title: "High & Loose",
     label: "높은 절개선 · 여유 있는 디자인",
-    scar: "흉터 위치가 음경 중간에 가까운 편",
-    fit: "전체적으로 피부 여유를 충분히 남기는 방향",
-    note: "평상시 귀두가 일부 덮일 가능성을 함께 고려",
+    image: "high-loose.webp",
+    summary:
+      "봉합선이 음경 몸통 중간 쪽에 위치하고 피부를 넉넉히 남기는 형태입니다. 전체적인 피부 움직임과 주름이 네 가지 유형 중 비교적 많은 편입니다.",
+    details: [
+      {
+        label: "절개선 위치",
+        value: "귀두에서 떨어진 몸통 쪽에 봉합선이 형성되어 High 타입의 특징이 나타납니다.",
+      },
+      {
+        label: "피부 여유",
+        value: "평상시와 발기 시 모두 피부가 비교적 넉넉하게 움직일 수 있도록 설계합니다.",
+      },
+      {
+        label: "형태적 특징",
+        value: "주름이 자연스럽게 남고 내측 피부가 Low 타입보다 상대적으로 많이 유지됩니다.",
+      },
+    ],
+    note: "피부를 많이 남기면 평상시 귀두가 일부 다시 덮일 수 있으므로 현재 포피 길이와 원하는 노출 정도를 함께 확인해야 합니다.",
     tone: "loose",
     recommended: false,
   },
@@ -39,9 +84,24 @@ const designs = [
     code: "H · T",
     title: "High & Tight",
     label: "높은 절개선 · 탄탄한 디자인",
-    scar: "흉터 위치가 음경 중간에 가까운 편",
-    fit: "주름을 줄인 탄탄한 외형을 원할 때 고려",
-    note: "발기 시 당김 가능성을 정밀하게 확인",
+    image: "high-tight.webp",
+    summary:
+      "봉합선은 음경 몸통 중간 쪽에 두면서 피부 주름을 적게 남기는 형태입니다. 절개선의 위치가 비교적 높고 표면은 팽팽하게 정돈됩니다.",
+    details: [
+      {
+        label: "절개선 위치",
+        value: "봉합선이 귀두에서 떨어져 음경 중간에 가까우며 외부에서 위치가 비교적 잘 보일 수 있습니다.",
+      },
+      {
+        label: "피부 여유",
+        value: "남는 주름을 줄이는 방향으로 피부를 맞춰 탄탄한 외형을 만듭니다.",
+      },
+      {
+        label: "형태적 특징",
+        value: "내측 피부를 상대적으로 많이 남기면서도 표면의 느슨함은 줄인 조합입니다.",
+      },
+    ],
+    note: "발기 시 피부가 부족하면 당김이나 불편감이 생길 수 있어 예상 발기 길이, 피부 탄력과 절제량을 보수적으로 판단해야 합니다.",
     tone: "high",
     recommended: false,
   },
@@ -325,29 +385,53 @@ export default function Home() {
                 여러 가지 디자인이 있습니다
               </>
             }
-            description="모든 수술을 같은 방식으로 진행하지 않습니다. 개인의 음경 해부학적 특징과 원하는 결과를 고려해 적합한 디자인을 선택합니다."
+            description="Low와 High는 봉합선의 위치를, Loose와 Tight는 남기는 피부의 여유도를 뜻합니다. 네 가지 분류는 상담을 돕기 위한 기준이며 실제 디자인은 개인의 해부학적 조건에 맞춰 세밀하게 조정합니다."
           />
+          <div className="design-basics" aria-label="포경수술 디자인 용어 안내">
+            <div>
+              <span>POSITION</span>
+              <strong>LOW ↔ HIGH</strong>
+              <p>봉합선이 귀두에 가까운지, 음경 몸통 쪽에 가까운지를 구분합니다.</p>
+            </div>
+            <div>
+              <span>SKIN MARGIN</span>
+              <strong>LOOSE ↔ TIGHT</strong>
+              <p>수술 후 피부 주름과 발기 시 움직임을 위해 어느 정도 여유를 남길지 구분합니다.</p>
+            </div>
+          </div>
           <div className="design-grid">
-            {designs.map((design, index) => (
+            {designs.map((design) => (
               <article className={`design-card ${design.tone}`} key={design.title}>
                 <div className="design-visual">
                   <Image
-                    src={`${ASSET_BASE}/medical/circumcision-design-types.png`}
+                    src={`${ASSET_BASE}/medical/${design.image}`}
                     alt={`${design.title}: ${design.label} 의료 도식`}
                     fill
-                    sizes="(max-width: 760px) 100vw, 25vw"
-                    className={`design-medical-image design-panel-${index + 1}`}
+                    sizes="(max-width: 760px) 100vw, 50vw"
+                    className="design-medical-image"
                   />
                   <span className="design-code">{design.code}</span>
                 </div>
-                {design.recommended ? <span className="recommend-badge">BALANCED CHOICE</span> : null}
-                <h3>{design.title}</h3>
-                <p>{design.label}</p>
-                <ul>
-                  <li>{design.scar}</li>
-                  <li>{design.fit}</li>
-                </ul>
-                <small>{design.note}</small>
+                <div className="design-content">
+                  {design.recommended ? (
+                    <span className="recommend-badge">BALANCED CHOICE</span>
+                  ) : null}
+                  <h3>{design.title}</h3>
+                  <p className="design-label">{design.label}</p>
+                  <p className="design-summary">{design.summary}</p>
+                  <dl className="design-details">
+                    {design.details.map((detail) => (
+                      <div key={detail.label}>
+                        <dt>{detail.label}</dt>
+                        <dd>{detail.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <div className="design-note">
+                    <strong>디자인 시 확인할 점</strong>
+                    <p>{design.note}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
@@ -356,9 +440,10 @@ export default function Home() {
             <div>
               <h3>결과의 차이를 결정하는 요소</h3>
               <p>
-                얼마나 피부를 절제할지, 어떤 조직을 온전히 보존할지에 따라
-                수술 후 모양과 기능적 편안함이 달라질 수 있습니다. 정밀한
-                사전 디자인으로 당김이나 불균형 가능성을 줄입니다.
+                네 가지 타입 중 하나를 그대로 적용하는 것이 아니라 평상시 포피의 길이,
+                발기 시 예상 길이와 둘레, 피부 탄력, 소대의 형태, 원하는 봉합선 위치를
+                함께 확인해야 합니다. 이를 바탕으로 필요한 피부만 절제하고 보존할
+                조직과 봉합 위치를 개인별로 조정합니다.
               </p>
             </div>
           </aside>

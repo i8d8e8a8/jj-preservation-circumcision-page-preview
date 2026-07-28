@@ -474,8 +474,43 @@ img {
 
 .design-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.design-basics {
+  display: grid;
+  margin-bottom: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.design-basics div {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 22px 24px;
+}
+
+.design-basics span {
+  display: block;
+  margin-bottom: 7px;
+  color: #86a9ba;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.design-basics strong {
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.design-basics p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 .design-card {
@@ -488,33 +523,13 @@ img {
 
 .design-visual {
   position: relative;
-  height: 230px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #edf4f7;
+  background: #b8b7c0;
 }
 
 .design-medical-image {
-  top: 0 !important;
-  width: 400% !important;
-  max-width: none !important;
-  height: 100% !important;
   object-fit: cover;
-}
-
-.design-panel-1 {
-  left: 0 !important;
-}
-
-.design-panel-2 {
-  left: -100% !important;
-}
-
-.design-panel-3 {
-  left: -200% !important;
-}
-
-.design-panel-4 {
-  left: -300% !important;
 }
 
 .design-code {
@@ -534,21 +549,33 @@ img {
   letter-spacing: 0.12em;
 }
 
-.design-card h3 {
-  margin: 22px 22px 5px;
-  color: var(--navy);
-  font-size: 18px;
+.design-content {
+  padding: 26px 28px 0;
 }
 
-.design-card p {
-  margin: 0 22px 24px;
-  color: var(--muted);
+.design-card h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 24px;
+}
+
+.design-card .design-label {
+  margin: 0 0 20px;
+  color: var(--blue);
   font-size: 12px;
+  font-weight: 800;
+}
+
+.design-card .design-summary {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .design-card .recommend-badge {
   display: inline-flex;
-  margin: 20px 22px 0;
+  margin: 0 0 13px;
   border-radius: 999px;
   background: #e8f3f8;
   padding: 7px 10px;
@@ -558,34 +585,50 @@ img {
   letter-spacing: 0.08em;
 }
 
-.design-card .recommend-badge + h3 {
-  margin-top: 12px;
+.design-details {
+  margin: 0;
+  border-top: 1px solid var(--line);
 }
 
-.design-card ul {
+.design-details div {
   display: grid;
-  min-height: 112px;
+  grid-template-columns: 92px 1fr;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.design-details dt {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.design-details dd {
   margin: 0;
-  gap: 9px;
-  border-top: 1px solid var(--line);
-  padding: 20px 22px 16px 38px;
   color: #506673;
   font-size: 11px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.design-card li::marker {
-  color: var(--blue);
-}
-
-.design-card small {
-  display: block;
-  min-height: 64px;
+.design-note {
+  margin: 22px -28px 0;
   background: var(--mist);
-  padding: 15px 22px;
+  padding: 20px 28px 23px;
+}
+
+.design-note strong {
+  display: block;
+  margin-bottom: 7px;
   color: var(--navy);
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 900;
+}
+
+.design-note p {
+  margin: 0;
+  color: #526b78;
+  font-size: 11px;
   line-height: 1.55;
 }
 
@@ -1546,6 +1589,10 @@ footer {
     gap: 10px;
   }
 
+  .design-basics {
+    grid-template-columns: 1fr;
+  }
+
   .indication-grid {
     grid-template-columns: 1fr;
   }
@@ -1558,36 +1605,31 @@ footer {
     margin-top: 44px;
   }
 
-  .design-visual {
-    height: 160px;
-  }
-
   .design-card h3 {
-    margin: 18px 14px 5px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
-  .design-card p {
-    margin: 0 14px 18px;
-    font-size: 10px;
-    line-height: 1.5;
+  .design-content {
+    padding: 22px 20px 0;
   }
 
   .design-card .recommend-badge {
-    margin: 14px 14px 0;
     font-size: 8px;
   }
 
-  .design-card ul {
-    min-height: 148px;
-    padding: 16px 12px 14px 28px;
-    font-size: 9px;
+  .design-card .design-summary {
+    font-size: 12px;
   }
 
-  .design-card small {
-    min-height: 76px;
-    padding: 13px 14px;
-    font-size: 9px;
+  .design-details div {
+    grid-template-columns: 78px 1fr;
+    gap: 12px;
+  }
+
+  .design-note {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 18px 20px 21px;
   }
 
   .decision-card {
