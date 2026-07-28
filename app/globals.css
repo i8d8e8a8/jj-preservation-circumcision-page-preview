@@ -1438,6 +1438,167 @@ footer {
   font-size: 10px;
 }
 
+/* Generated medical icon system */
+.indication-icon,
+.method-icon,
+.step-icon,
+.factor-icon {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 24px;
+  background: #f7fbff;
+}
+
+.indication-icon img,
+.method-icon img,
+.step-icon img,
+.factor-icon img {
+  object-fit: cover;
+}
+
+.indication-grid article {
+  position: relative;
+  min-height: 360px;
+  text-align: center;
+}
+
+.indication-grid article > span {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+}
+
+.indication-icon {
+  width: 132px;
+  height: 132px;
+  margin: 18px auto 10px;
+}
+
+.indication-grid h3 {
+  margin: 12px 0 12px;
+}
+
+.method-grid article {
+  min-height: 360px;
+  text-align: center;
+}
+
+.method-grid article > span {
+  display: block;
+  text-align: left;
+}
+
+.method-icon {
+  width: 112px;
+  height: 112px;
+  margin: 20px auto 12px;
+}
+
+.method-grid h3 {
+  margin: 10px 0 14px;
+}
+
+.protocol-list li {
+  min-height: 390px;
+}
+
+.step-icon {
+  width: 116px;
+  height: 116px;
+  margin: 18px auto 0;
+}
+
+.step-copy {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.factor-icon {
+  position: relative;
+  z-index: 2;
+  width: 126px;
+  height: 126px;
+  margin: 20px 0 4px;
+}
+
+.factor-grid h3 {
+  margin: 18px 0 16px;
+}
+
+@media (max-width: 980px) {
+  .protocol-list li,
+  .protocol-list li:first-child,
+  .protocol-list li:last-child {
+    grid-template-columns: 70px 108px 1fr;
+    gap: 18px;
+  }
+
+  .step-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0;
+  }
+
+  .step-copy {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 760px) {
+  .indication-grid article {
+    min-height: 0;
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .indication-icon {
+    width: 122px;
+    height: 122px;
+    margin-top: 10px;
+  }
+
+  .method-grid article,
+  .method-grid article:nth-child(2n),
+  .method-grid article:last-child {
+    padding: 24px 10px 30px;
+  }
+
+  .method-icon {
+    width: 108px;
+    height: 108px;
+    margin-top: 8px;
+  }
+
+  .method-grid h3 {
+    margin-top: 8px;
+  }
+
+  .protocol-list li,
+  .protocol-list li:first-child,
+  .protocol-list li:last-child {
+    grid-template-columns: 44px 74px 1fr;
+    gap: 12px;
+    padding: 22px 0;
+  }
+
+  .step-number {
+    font-size: 30px;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+  }
+
+  .factor-icon {
+    width: 112px;
+    height: 112px;
+  }
+}
+
 .mobile-bar,
 .mobile-only {
   display: none;
@@ -2246,5 +2407,42 @@ body {
 
   .faq-list summary {
     font-size: 16px;
+  }
+
+  .indication-grid article {
+    min-height: 0;
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .indication-grid h3 {
+    margin-top: 12px;
+  }
+
+  .method-grid article,
+  .method-grid article:nth-child(2n),
+  .method-grid article:last-child {
+    padding: 24px 10px 30px;
+  }
+
+  .method-grid h3 {
+    margin-top: 8px;
+  }
+
+  .protocol-list li,
+  .protocol-list li:first-child,
+  .protocol-list li:last-child {
+    grid-template-columns: 44px 74px 1fr;
+    gap: 12px;
+    padding: 22px 0;
+  }
+
+  .step-number {
+    font-size: 30px;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: 70px;
   }
 }
