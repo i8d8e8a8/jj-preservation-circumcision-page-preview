@@ -115,8 +115,8 @@ const clinicMethods = [
   },
   {
     number: "02",
-    title: "레이저 지혈",
-    copy: "레이저를 활용해 수술 중 출혈 부담을 줄이고 정교하게 조직을 다루는 데 집중합니다.",
+    title: "확인하며 절제·지혈",
+    copy: "조직의 위치와 깊이를 직접 확인하면서 필요한 층을 절제하고 단계적으로 지혈합니다.",
   },
   {
     number: "03",
@@ -138,7 +138,7 @@ const clinicMethods = [
 const protocol = [
   {
     title: "정밀 진단",
-    copy: "발기 시 예상 길이, 소대 모양, 피부 여유도를 세심하게 측정합니다.",
+    copy: "발기 시 예상 길이, 피부 이동성, 소대 모양과 길이, 포피 여유도를 함께 확인합니다.",
   },
   {
     title: "절제 범위 디자인",
@@ -146,15 +146,15 @@ const protocol = [
   },
   {
     title: "표재근막 보존",
-    copy: "피부 하부 근막과 미세혈관망을 가능한 온전히 보존합니다.",
+    copy: "표재근막과 그 안의 림프관·정맥망·미세혈관, 감각신경의 불필요한 손상을 줄입니다.",
   },
   {
     title: "성형외과적 미세 봉합",
-    copy: "정교한 봉합으로 흉터 부담을 줄이고 자연스러운 라인을 구현합니다.",
+    copy: "6-0 나일론 미세실로 절개선의 높이와 간격을 맞춰 정교하게 봉합합니다.",
   },
   {
     title: "회복 관리",
-    copy: "PDRN 주사 케어를 포함한 단계별 회복 관리를 진행합니다.",
+    copy: "상태에 따라 PDRN을 포함한 재생 관리를 선택적으로 적용하고 회복 경과를 확인합니다.",
   },
 ];
 
@@ -178,6 +178,14 @@ const faqs = [
   {
     q: "운동은 언제부터 가능한가요?",
     a: "가벼운 산책이나 일상 활동은 당일부터 가능하며, 격렬한 운동이나 헬스는 보통 2~3주 후를 권장합니다.",
+  },
+  {
+    q: "소대와 표재근막을 왜 확인하나요?",
+    a: "소대는 음경 아랫면에 있는 구조로 길이와 모양에 따라 수술 디자인이 달라질 수 있습니다. 표재근막에는 림프관과 정맥망, 미세혈관 및 신경 조직이 분포하므로 필요한 절제 범위와 보존할 층을 수술 전후로 세심하게 구분합니다.",
+  },
+  {
+    q: "PDRN 재생 관리는 누구나 받나요?",
+    a: "PDRN은 상처 회복을 보조하기 위한 선택적 관리입니다. 적용 여부와 횟수는 수술 범위, 상처 상태, 알레르기 및 기저질환 등을 확인한 뒤 의료진이 안내하며, 회복 속도와 반응에는 개인차가 있습니다.",
   },
   {
     q: "성관계는 언제부터 가능한가요?",
@@ -528,6 +536,134 @@ export default function Home() {
           <p className="method-note">
             적용 가능한 마취 및 수술 방식은 문진과 진찰 후 의료진이 안내합니다.
           </p>
+
+          <div className="method-stories">
+            <article className="method-story">
+              <div className="method-story-media">
+                <Image
+                  src={`${ASSET_BASE}/reference/preop-design.webp`}
+                  alt="길이와 피부 이동성, 소대 형태를 측정하고 회복 관리를 계획하는 세 단계 아이콘"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                />
+              </div>
+              <div className="method-story-copy">
+                <span>STEP 01 · DESIGN</span>
+                <h3>발기 시점까지 고려한 사전 디자인</h3>
+                <p>
+                  평상시 모습만 보고 절제량을 정하지 않습니다. 발기 시 예상 길이와
+                  음경 피부의 이동성, 포피 여유도, 소대의 모양과 길이를 함께 확인해
+                  수술 후 피부가 과도하게 당기지 않도록 절제 범위를 설계합니다.
+                </p>
+                <ul>
+                  <li>예상 발기 길이와 둘레 변화 확인</li>
+                  <li>피부 이동성과 남길 여유도 평가</li>
+                  <li>소대 위치·길이와 원하는 봉합선 위치 확인</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="method-story reverse">
+              <div className="method-story-media">
+                <Image
+                  src={`${ASSET_BASE}/reference/electrosurgical-dissection.webp`}
+                  alt="조직 위치를 확인하며 전기소작기로 절제와 지혈을 진행하는 단면 도식"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                />
+              </div>
+              <div className="method-story-copy">
+                <span>STEP 02 · DISSECTION</span>
+                <h3>보이는 층을 확인하며 절제와 지혈</h3>
+                <p>
+                  피부 아래 구조를 확인하지 않은 채 깊이를 일률적으로 정하지 않습니다.
+                  절제할 층과 보존할 층을 구분하고, 조직의 위치를 직접 확인하면서
+                  필요한 범위만 다루며 출혈 부위는 단계적으로 지혈합니다.
+                </p>
+                <div className="method-callout">
+                  에너지 기구의 종류보다 중요한 것은 조직의 깊이와 위치를 확인하고
+                  주변 구조에 불필요한 열 손상을 주지 않도록 사용하는 과정입니다.
+                </div>
+              </div>
+            </article>
+
+            <article className="method-story">
+              <div className="method-story-media">
+                <Image
+                  src={`${ASSET_BASE}/reference/fascia-layer-preservation.webp`}
+                  alt="피부 아래 표재근막과 심부 조직의 층을 구분한 보존 수술 도식"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                />
+              </div>
+              <div className="method-story-copy">
+                <span>STEP 03 · PRESERVATION</span>
+                <h3>표재근막과 소대를 가능한 보존</h3>
+                <p>
+                  표재근막에는 림프관과 정맥망, 모세혈관 및 감각신경 조직이 분포합니다.
+                  필요한 피부층을 정교하게 제거하되 그 아래 표재근막의 불필요한 손상을
+                  줄이고, 음경 아랫면의 소대 역시 위치와 길이를 확인해 보존 범위를
+                  결정합니다.
+                </p>
+                <ul>
+                  <li>림프관·정맥망과 미세혈관 구조 존중</li>
+                  <li>감각신경에 대한 불필요한 손상 최소화 지향</li>
+                  <li>소대 형태를 살펴 자연스러운 하부 라인 고려</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="method-story reverse">
+              <div className="method-story-media">
+                <Image
+                  src={`${ASSET_BASE}/reference/microsuture-6-0.webp`}
+                  alt="6-0 나일론 미세 봉합사와 머리카락의 두께를 비교한 이미지"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                />
+              </div>
+              <div className="method-story-copy">
+                <span>STEP 04 · MICRO SUTURE</span>
+                <h3>6-0 나일론으로 세밀하게 맞추는 봉합</h3>
+                <p>
+                  본원은 머리카락과 비슷한 수준으로 가는 6-0 나일론 미세 봉합사를
+                  사용합니다. 절개선 양쪽의 높이와 간격을 촘촘하게 맞춰 봉합선이
+                  울퉁불퉁하거나 벌어지는 부담을 줄이고, 정돈된 라인으로 회복되도록
+                  마무리합니다.
+                </p>
+                <div className="method-callout">
+                  흉터의 정도는 개인 체질, 상처 장력, 감염 여부와 사후 관리에 따라서도
+                  달라질 수 있습니다.
+                </div>
+              </div>
+            </article>
+
+            <article className="method-story">
+              <div className="method-story-media">
+                <Image
+                  src={`${ASSET_BASE}/reference/pdrn-recovery-effects.webp`}
+                  alt="포경수술 후 PDRN 재생 관리의 목적을 설명하는 참고 인포그래픽"
+                  fill
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                />
+              </div>
+              <div className="method-story-copy">
+                <span>STEP 05 · RECOVERY CARE</span>
+                <h3>수술로 끝나지 않는 회복 관리</h3>
+                <p>
+                  봉합 후에는 상처 상태를 확인하고 필요할 경우 PDRN을 포함한 재생
+                  관리를 선택적으로 안내합니다. PDRN은 조직 회복과 관련해 연구되고
+                  있는 물질로, 수술 후 관리에서는 상처 회복을 보조하는 목적으로
+                  고려할 수 있습니다.
+                </p>
+                <div className="method-callout caution">
+                  재생 관리는 모든 환자에게 동일하게 적용하지 않습니다. 기대 효과와
+                  적용 횟수는 수술 범위와 개인 상태에 따라 달라지며 의료진의 진찰 후
+                  결정합니다.
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
