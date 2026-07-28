@@ -229,7 +229,7 @@ export default function Home() {
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
-            src={`${ASSET_BASE}/hero-preservation-fascia-v9.webp`}
+            src={`${ASSET_BASE}/hero-circumcision-before-after-v11.webp`}
             alt=""
             fill
             priority
@@ -263,22 +263,6 @@ export default function Home() {
               </a>
             </div>
             <p className="privacy-note">전 직원 남성 의료진 · 1:1 비밀 상담</p>
-          </div>
-        </div>
-        <div className="hero-proof" aria-label="보존 디자인 포경수술의 핵심 원칙">
-          <div className="shell proof-grid">
-            <div>
-              <strong>개인별 해부학적 디자인</strong>
-              <span>절제 위치와 피부 여유도를 세밀하게 설계합니다</span>
-            </div>
-            <div>
-              <strong>표재근막 보존 중심</strong>
-              <span>피부와 진피를 선택적으로 절제해 중요 조직층을 남깁니다</span>
-            </div>
-            <div>
-              <strong>미세 봉합·회복 관리</strong>
-              <span>섬세한 봉합과 개인별 회복 과정을 함께 살핍니다</span>
-            </div>
           </div>
         </div>
       </section>
@@ -344,20 +328,20 @@ export default function Home() {
               <span>01</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-phimosis.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-phimosis-v2.webp`}
                   alt=""
                   fill
                   sizes="128px"
                 />
               </div>
               <h3>진성포경</h3>
-              <p>포피 입구가 너무 좁아 귀두 뒤로 충분히 젖혀지지 않는 경우</p>
+              <p>포피 입구가 너무 좁아 포피가 귀두 뒤로 젖혀지지 않는 경우</p>
             </article>
             <article>
               <span>02</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-inflammation.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-inflammation-v2.webp`}
                   alt=""
                   fill
                   sizes="128px"
@@ -383,7 +367,7 @@ export default function Home() {
               <span>04</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-hygiene.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-hygiene-v2.webp`}
                   alt=""
                   fill
                   sizes="128px"
@@ -565,13 +549,45 @@ export default function Home() {
 
           <div className="method-stories">
             <article className="method-story">
-              <div className="method-story-media">
-                <Image
-                  src={`${ASSET_BASE}/reference/preop-design.webp`}
-                  alt="길이와 피부 이동성, 소대 형태를 측정하고 회복 관리를 계획하는 세 단계 아이콘"
-                  fill
-                  sizes="(max-width: 760px) 100vw, 50vw"
-                />
+              <div
+                className="method-story-media preop-design-media"
+                aria-label="발기 시점까지 고려하는 세 가지 사전 디자인 항목"
+              >
+                <div className="preop-icon-grid">
+                  <div className="preop-icon-item">
+                    <div className="preop-icon">
+                      <Image
+                        src={`${ASSET_BASE}/generated-icons/preop-measure-v2.webp`}
+                        alt=""
+                        fill
+                        sizes="180px"
+                      />
+                    </div>
+                    <strong>길이·둘레 변화</strong>
+                  </div>
+                  <div className="preop-icon-item">
+                    <div className="preop-icon">
+                      <Image
+                        src={`${ASSET_BASE}/generated-icons/preop-mobility-v2.webp`}
+                        alt=""
+                        fill
+                        sizes="180px"
+                      />
+                    </div>
+                    <strong>피부 이동성·여유도</strong>
+                  </div>
+                  <div className="preop-icon-item">
+                    <div className="preop-icon">
+                      <Image
+                        src={`${ASSET_BASE}/generated-icons/preop-frenulum-v2.webp`}
+                        alt=""
+                        fill
+                        sizes="180px"
+                      />
+                    </div>
+                    <strong>소대·봉합선 위치</strong>
+                  </div>
+                </div>
               </div>
               <div className="method-story-copy">
                 <span>STEP 01 · DESIGN</span>
