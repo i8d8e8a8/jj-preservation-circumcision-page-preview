@@ -341,7 +341,7 @@ export default function Home() {
               <span>02</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-inflammation-v3.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-inflammation-v4.webp`}
                   alt=""
                   fill
                   sizes="128px"
@@ -579,7 +579,7 @@ export default function Home() {
                   <div className="preop-icon-item">
                     <div className="preop-icon">
                       <Image
-                        src={`${ASSET_BASE}/generated-icons/preop-frenulum-v2.webp`}
+                        src={`${ASSET_BASE}/generated-icons/preop-frenulum-v4.webp`}
                         alt=""
                         fill
                         sizes="180px"
