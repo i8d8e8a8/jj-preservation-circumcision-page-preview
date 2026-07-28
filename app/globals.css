@@ -1141,22 +1141,22 @@ img {
 
 .doctor-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 90px;
+  grid-template-columns: 1fr;
+  gap: 58px;
 }
 
 .doctor-photo {
   position: relative;
-  min-height: 620px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 24px;
-  background: var(--mist);
+  background: #071725;
 }
 
 .doctor-photo img {
   object-fit: cover;
-  object-position: center 50%;
+  object-position: center;
 }
 
 .doctor-photo::after {
@@ -1191,6 +1191,12 @@ img {
   line-height: 1.45;
 }
 
+.doctor-copy {
+  width: min(880px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
 .doctor-copy > p {
   margin: 0;
   color: var(--muted);
@@ -1202,7 +1208,12 @@ img {
   display: flex;
   margin-top: 28px;
   align-items: flex-end;
+  justify-content: center;
   gap: 13px;
+}
+
+.doctor-copy .text-link {
+  justify-content: center;
 }
 
 .doctor-sign span {
@@ -1998,7 +2009,8 @@ footer {
   }
 
   .doctor-photo {
-    min-height: 460px;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .doctor-copy {

@@ -841,10 +841,10 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-procedure-cautery-dark-v5.webp`}
-              alt="어두운 수술실에서 전기 소작기 핸드피스를 들고 정밀 수술을 진행하는 강태진 대표원장"
+              src={`${ASSET_BASE}/doctor-procedure-real-dark-v7.webp`}
+              alt="어두운 수술실에서 전기 소작기 핸드피스로 정밀 수술을 진행하는 강태진 대표원장"
               fill
-              sizes="(max-width: 800px) 100vw, 46vw"
+              sizes="(max-width: 760px) 100vw, 1180px"
             />
             <span>남성수술 20년 이상</span>
           </div>
