@@ -1156,7 +1156,7 @@ img {
 
 .doctor-photo img {
   object-fit: cover;
-  object-position: 68% center;
+  object-position: center 44%;
 }
 
 .doctor-photo::after {
