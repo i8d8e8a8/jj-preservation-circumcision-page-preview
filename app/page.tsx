@@ -110,26 +110,31 @@ const designs = [
 const clinicMethods = [
   {
     number: "01",
+    icon: "method-sedation.webp",
     title: "선택적 반수면",
     copy: "불안감이 큰 경우 상태와 요청을 확인한 뒤 각성하 반수면 방식을 선택적으로 고려합니다.",
   },
   {
     number: "02",
+    icon: "method-dissection.webp",
     title: "확인하며 절제·지혈",
     copy: "조직의 위치와 깊이를 직접 확인하면서 필요한 층을 절제하고 단계적으로 지혈합니다.",
   },
   {
     number: "03",
+    icon: "method-design.webp",
     title: "개인 맞춤 심미 디자인",
     copy: "다양한 음경 재건수술 경험을 바탕으로 현재 모양과 피부 여유도를 함께 살핍니다.",
   },
   {
     number: "04",
+    icon: "method-suture.webp",
     title: "봉합부까지 고려",
     copy: "봉합 자리에 피부 터널이 생길 가능성을 줄이기 위한 세밀한 봉합 설계를 적용합니다.",
   },
   {
     number: "05",
+    icon: "method-fascia.webp",
     title: "표재근막 보존",
     copy: "필요한 범위의 피부와 진피층은 정교하게 절제하고, 그 아래 표재근막층은 가능한 보존하는 방향을 우선합니다.",
   },
@@ -137,22 +142,27 @@ const clinicMethods = [
 
 const protocol = [
   {
+    icon: "protocol-diagnosis.webp",
     title: "정밀 진단",
     copy: "발기 시 예상 길이, 피부 이동성, 소대 모양과 길이, 포피 여유도를 함께 확인합니다.",
   },
   {
+    icon: "protocol-design.webp",
     title: "절제 범위 디자인",
     copy: "개인별 유형에 맞춰 필요한 만큼의 피부 제거 범위를 설정합니다.",
   },
   {
+    icon: "protocol-preservation.webp",
     title: "표재근막 보존",
     copy: "표재근막과 그 안의 림프관·정맥망·미세혈관, 감각신경의 불필요한 손상을 줄입니다.",
   },
   {
+    icon: "protocol-suture.webp",
     title: "성형외과적 미세 봉합",
     copy: "6-0 나일론 미세실로 절개선의 높이와 간격을 맞춰 정교하게 봉합합니다.",
   },
   {
+    icon: "protocol-recovery.webp",
     title: "회복 관리",
     copy: "상태에 따라 PDRN을 포함한 재생 관리를 선택적으로 적용하고 회복 경과를 확인합니다.",
   },
@@ -356,21 +366,53 @@ export default function Home() {
           <div className="indication-grid">
             <article>
               <span>01</span>
+              <div className="indication-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/indication-phimosis.webp`}
+                  alt=""
+                  fill
+                  sizes="128px"
+                />
+              </div>
               <h3>진성포경</h3>
               <p>포피 입구가 너무 좁아 귀두 뒤로 충분히 젖혀지지 않는 경우</p>
             </article>
             <article>
               <span>02</span>
+              <div className="indication-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/indication-inflammation.webp`}
+                  alt=""
+                  fill
+                  sizes="128px"
+                />
+              </div>
               <h3>재발성 귀두포피염</h3>
               <p>귀두와 포피의 염증, 분비물, 냄새가 반복되어 일상에 불편한 경우</p>
             </article>
             <article>
               <span>03</span>
+              <div className="indication-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/indication-paraphimosis.webp`}
+                  alt=""
+                  fill
+                  sizes="128px"
+                />
+              </div>
               <h3>감돈포경</h3>
               <p>뒤로 젖혀진 포피가 링처럼 음경을 조여 붓기와 통증을 만드는 경우</p>
             </article>
             <article>
               <span>04</span>
+              <div className="indication-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/indication-hygiene.webp`}
+                  alt=""
+                  fill
+                  sizes="128px"
+                />
+              </div>
               <h3>지속적인 위생 불편</h3>
               <p>포피 사이의 구지와 악취로 청결 관리가 어렵거나 불편이 반복되는 경우</p>
             </article>
@@ -528,6 +570,14 @@ export default function Home() {
             {clinicMethods.map((method) => (
               <article key={method.title}>
                 <span>{method.number}</span>
+                <div className="method-icon">
+                  <Image
+                    src={`${ASSET_BASE}/generated-icons/${method.icon}`}
+                    alt=""
+                    fill
+                    sizes="110px"
+                  />
+                </div>
                 <h3>{method.title}</h3>
                 <p>{method.copy}</p>
               </article>
@@ -678,6 +728,14 @@ export default function Home() {
             {protocol.map((step, index) => (
               <li key={step.title}>
                 <div className="step-number">{String(index + 1).padStart(2, "0")}</div>
+                <div className="step-icon">
+                  <Image
+                    src={`${ASSET_BASE}/generated-icons/${step.icon}`}
+                    alt=""
+                    fill
+                    sizes="110px"
+                  />
+                </div>
                 <div className="step-copy">
                   <h3>{step.title}</h3>
                   <p>{step.copy}</p>
@@ -697,6 +755,14 @@ export default function Home() {
           <div className="factor-grid">
             <article>
               <span>01</span>
+              <div className="factor-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/protocol-diagnosis.webp`}
+                  alt=""
+                  fill
+                  sizes="120px"
+                />
+              </div>
               <h3>적정 절제량</h3>
               <p>
                 과도한 피부 절제로 인한 발기 시 당김이나 통증을 예방하기 위해
@@ -705,6 +771,14 @@ export default function Home() {
             </article>
             <article>
               <span>02</span>
+              <div className="factor-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/protocol-design.webp`}
+                  alt=""
+                  fill
+                  sizes="120px"
+                />
+              </div>
               <h3>정밀 디자인</h3>
               <p>
                 개인별 해부학적 특성과 곡선을 고려하여 수술 후 흉터 위치와
@@ -713,6 +787,14 @@ export default function Home() {
             </article>
             <article>
               <span>03</span>
+              <div className="factor-icon">
+                <Image
+                  src={`${ASSET_BASE}/generated-icons/protocol-preservation.webp`}
+                  alt=""
+                  fill
+                  sizes="120px"
+                />
+              </div>
               <h3>핵심 조직 보존</h3>
               <p>
                 표재근막과 신경, 미세혈관 구조를 가능한 보존하여 기능과 감각의
