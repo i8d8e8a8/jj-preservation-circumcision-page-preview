@@ -514,28 +514,47 @@ export default function Home() {
             </div>
             <div className="anatomy-visual">
               <Image
-                src={`${ASSET_BASE}/medical/circumcision-layer-comparison-v3.png`}
+                src={`${ASSET_BASE}/medical/circumcision-layer-comparison-v5.png`}
                 alt="왼쪽 일반적인 깊은 절제 예시, 가운데 음경 횡단면, 오른쪽 피부와 진피만 들어 올리고 표재근막을 남긴 보존 절제 예시를 비교한 의료 도식"
                 fill
                 sizes="(max-width: 760px) 100vw, 1160px"
                 className="fascia-medical-image"
               />
+              <div className="anatomy-image-titles" aria-hidden="true">
+                <div>
+                  <span>01</span>
+                  <strong>일반적인 포경</strong>
+                </div>
+                <div>
+                  <span>02</span>
+                  <strong>음경 횡단면 구조</strong>
+                </div>
+                <div>
+                  <span>03</span>
+                  <strong>표재근막 보존 포경</strong>
+                </div>
+              </div>
+              <div className="anatomy-layer-order">
+                <span>해면체</span>
+                <i aria-hidden="true" />
+                <span>백막</span>
+                <i aria-hidden="true" />
+                <span>심부근막</span>
+                <i aria-hidden="true" />
+                <span>표재근막</span>
+                <i aria-hidden="true" />
+                <span>피부</span>
+              </div>
             </div>
             <div className="anatomy-comparison-copy">
               <article>
-                <span>01</span>
-                <h4>일반적인 깊은 절제 예시</h4>
-                <p>피부·진피와 함께 표재근막층까지 절제되는 단면 예시입니다.</p>
+                <p>일반적인 포경은 피부·진피와 함께 표재근막까지 절제됩니다.</p>
               </article>
               <article>
-                <span>02</span>
-                <h4>음경 횡단면</h4>
-                <p>피부 아래 표재근막과 심부근막, 내부 해면체 구조의 위치 관계를 보여줍니다.</p>
+                <p>해면체를 백막이 감싸고, 그 바깥을 심부근막·표재근막·피부가 차례로 둘러쌉니다.</p>
               </article>
               <article>
-                <span>03</span>
-                <h4>표재근막 보존 중심 절제</h4>
-                <p>피부·진피를 계획 범위에서 절제하고 청록색 표재근막층은 남기는 방향입니다.</p>
+                <p>표재근막 보존 포경은 피부·진피만 절제하고 표재근막은 남깁니다.</p>
               </article>
             </div>
             <p className="anatomy-caveat">

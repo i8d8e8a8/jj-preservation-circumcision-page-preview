@@ -35,6 +35,8 @@
     "build",
     "db",
     "examples",
+    "jj-ha-filler-landing",
+    "jj-ha-filler-preview",
     "worker",
     "drizzle.config.ts",
     "vite.config.ts"
