@@ -530,6 +530,7 @@ img {
 
 .design-medical-image {
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .design-code {
@@ -1806,5 +1807,275 @@ footer {
   *::before,
   *::after {
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* Readability pass */
+body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.desktop-nav,
+.header-cta {
+  font-size: 15px;
+}
+
+.hero-kicker,
+.eyebrow {
+  font-size: 13px;
+}
+
+.hero-lead {
+  font-size: 20px;
+}
+
+.button {
+  font-size: 16px;
+}
+
+.privacy-note {
+  font-size: 14px;
+}
+
+.proof-grid span {
+  font-size: 15px;
+}
+
+.facts-grid span,
+.visit-details span {
+  font-size: 12px;
+}
+
+.facts-grid strong {
+  font-size: 23px;
+}
+
+.facts-grid p {
+  font-size: 14px;
+}
+
+.intro-mark small {
+  font-size: 11px;
+}
+
+.intro-copy p {
+  font-size: 16px;
+}
+
+.indication-grid article > span {
+  font-size: 13px;
+}
+
+.indication-grid h3 {
+  font-size: 22px;
+}
+
+.indication-grid p,
+.medical-alert {
+  font-size: 15px;
+}
+
+.section-description {
+  font-size: 18px;
+}
+
+.design-basics span {
+  font-size: 11px;
+}
+
+.design-basics strong {
+  font-size: 19px;
+}
+
+.design-basics p {
+  font-size: 14px;
+}
+
+.design-code {
+  font-size: 12px;
+}
+
+.design-card h3 {
+  font-size: 26px;
+}
+
+.design-card .design-label {
+  font-size: 14px;
+}
+
+.design-card .design-summary {
+  font-size: 15px;
+}
+
+.design-card .recommend-badge {
+  font-size: 10px;
+}
+
+.design-details dt {
+  font-size: 13px;
+}
+
+.design-details dd {
+  font-size: 14px;
+}
+
+.design-note strong {
+  font-size: 12px;
+}
+
+.design-note p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.decision-card h3 {
+  font-size: 22px;
+}
+
+.decision-card p {
+  font-size: 16px;
+}
+
+.preserve-points span {
+  font-size: 13px;
+}
+
+.preserve-points p {
+  font-size: 16px;
+}
+
+.anatomy-badge,
+.treatment-label,
+.anatomy-legend span {
+  font-size: 12px;
+}
+
+.anatomy-copy h3 {
+  font-size: 23px;
+}
+
+.anatomy-copy p {
+  font-size: 15px;
+}
+
+.method-grid span {
+  font-size: 13px;
+}
+
+.method-grid h3,
+.step-copy h3 {
+  font-size: 19px;
+}
+
+.method-grid p {
+  font-size: 14px;
+}
+
+.method-note {
+  font-size: 13px;
+}
+
+.step-copy p {
+  font-size: 15px;
+}
+
+.factor-grid p {
+  font-size: 16px;
+}
+
+.candidate-grid li {
+  font-size: 18px;
+}
+
+.candidate-grid li span,
+.doctor-photo > span {
+  font-size: 13px;
+}
+
+.doctor-copy > p {
+  font-size: 17px;
+}
+
+.doctor-sign span {
+  font-size: 14px;
+}
+
+.text-link {
+  font-size: 15px;
+}
+
+.faq-list summary {
+  font-size: 18px;
+}
+
+.faq-list details > p {
+  font-size: 16px;
+}
+
+.visit-details strong {
+  font-size: 19px;
+}
+
+.visit-details p {
+  font-size: 14px;
+}
+
+.final-cta-inner > p:not(.eyebrow) {
+  font-size: 18px;
+}
+
+.final-cta small {
+  font-size: 13px;
+}
+
+.footer-inner p {
+  font-size: 13px;
+}
+
+.footer-inner span {
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .header-cta {
+    font-size: 13px;
+  }
+
+  .hero-kicker,
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .hero-lead {
+    font-size: 17px;
+  }
+
+  .proof-grid span {
+    font-size: 12px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .design-card h3 {
+    font-size: 23px;
+  }
+
+  .design-card .design-summary {
+    font-size: 14px;
+  }
+
+  .design-card .recommend-badge {
+    font-size: 9px;
+  }
+
+  .design-details dt {
+    font-size: 12px;
+  }
+
+  .faq-list summary {
+    font-size: 16px;
   }
 }

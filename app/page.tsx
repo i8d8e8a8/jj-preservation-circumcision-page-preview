@@ -131,7 +131,7 @@ const clinicMethods = [
   {
     number: "05",
     title: "표재근막 보존",
-    copy: "표피층을 정교하게 다루고 진피와 표재근막층은 가능한 보존하는 방향을 우선합니다.",
+    copy: "필요한 범위의 피부와 진피층은 정교하게 절제하고, 그 아래 표재근막층은 가능한 보존하는 방향을 우선합니다.",
   },
 ];
 
@@ -484,15 +484,15 @@ export default function Home() {
             <div className="anatomy-badge">DARTOS FASCIA</div>
             <div className="anatomy-visual">
               <Image
-                src={`${ASSET_BASE}/medical/superficial-fascia-preservation.png`}
-                alt="피부층 아래의 표재근막과 그 안의 미세혈관·신경 조직을 보존하는 원리를 보여주는 단면 의료 도식"
+                src={`${ASSET_BASE}/medical/superficial-fascia-preservation-v2.webp`}
+                alt="피부와 진피는 선택적으로 절제하고 그 아래 표재근막과 미세혈관·신경 조직은 보존하는 원리를 보여주는 단면 의료 도식"
                 fill
                 sizes="(max-width: 760px) 100vw, 55vw"
                 className="fascia-medical-image"
               />
-              <span className="treatment-label">선택적 피부 절제 범위</span>
+              <span className="treatment-label">피부·진피 선택 절제 범위</span>
               <div className="anatomy-legend">
-                <span className="legend-skin">피부·진피층</span>
+                <span className="legend-skin">피부·진피 절제층</span>
                 <span className="legend-fascia">표재근막 보존</span>
                 <span className="legend-vessel">미세혈관·신경망</span>
               </div>
@@ -500,9 +500,9 @@ export default function Home() {
             <div className="anatomy-copy">
               <h3>표재근막 보존 포경수술</h3>
               <p>
-                피부 하부의 표재근막(Dartos fascia)을 무조건 제거하지 않고
-                가능한 보존하여, 미세혈관과 신경 조직에 대한 불필요한 손상을
-                줄이는 수술 원칙입니다.
+                필요한 범위의 피부와 진피층은 깔끔하게 절제하되, 그 아래의
+                표재근막(Dartos fascia)은 가능한 보존하여 미세혈관과 신경
+                조직에 대한 불필요한 손상을 줄이는 수술 원칙입니다.
               </p>
             </div>
           </div>
