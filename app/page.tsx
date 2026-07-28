@@ -841,8 +841,8 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-procedure-final.png`}
-              alt="강태진 대표원장"
+              src={`${ASSET_BASE}/doctor-procedure-cautery-v2.webp`}
+              alt="수술실에서 전기 소작기 핸드피스를 들고 정밀 수술을 진행하는 강태진 대표원장"
               fill
               sizes="(max-width: 800px) 100vw, 46vw"
             />
