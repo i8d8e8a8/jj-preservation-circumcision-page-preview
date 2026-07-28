@@ -9,25 +9,69 @@ const designs = [
     code: "L · L",
     title: "Low & Loose",
     label: "낮은 절개선 · 여유 있는 디자인",
+    scar: "흉터 위치가 귀두에 비교적 가까운 편",
+    fit: "피부 여유를 남겨 발기 시 당김 부담을 줄이는 방향",
+    note: "균형형 디자인으로 우선 고려",
     tone: "soft",
+    recommended: true,
   },
   {
     code: "L · T",
     title: "Low & Tight",
     label: "낮은 절개선 · 탄탄한 디자인",
+    scar: "흉터 위치가 귀두에 비교적 가까운 편",
+    fit: "주름이 적고 깔끔한 외형을 선호할 때 고려",
+    note: "피부 여유도가 부족하면 당김이 생길 수 있음",
     tone: "tight",
-  },
-  {
-    code: "H · T",
-    title: "High & Tight",
-    label: "높은 절개선 · 탄탄한 디자인",
-    tone: "high",
+    recommended: false,
   },
   {
     code: "H · L",
     title: "High & Loose",
     label: "높은 절개선 · 여유 있는 디자인",
+    scar: "흉터 위치가 음경 중간에 가까운 편",
+    fit: "전체적으로 피부 여유를 충분히 남기는 방향",
+    note: "평상시 귀두가 일부 덮일 가능성을 함께 고려",
     tone: "loose",
+    recommended: false,
+  },
+  {
+    code: "H · T",
+    title: "High & Tight",
+    label: "높은 절개선 · 탄탄한 디자인",
+    scar: "흉터 위치가 음경 중간에 가까운 편",
+    fit: "주름을 줄인 탄탄한 외형을 원할 때 고려",
+    note: "발기 시 당김 가능성을 정밀하게 확인",
+    tone: "high",
+    recommended: false,
+  },
+];
+
+const clinicMethods = [
+  {
+    number: "01",
+    title: "선택적 반수면",
+    copy: "불안감이 큰 경우 상태와 요청을 확인한 뒤 각성하 반수면 방식을 선택적으로 고려합니다.",
+  },
+  {
+    number: "02",
+    title: "레이저 지혈",
+    copy: "레이저를 활용해 수술 중 출혈 부담을 줄이고 정교하게 조직을 다루는 데 집중합니다.",
+  },
+  {
+    number: "03",
+    title: "개인 맞춤 심미 디자인",
+    copy: "다양한 음경 재건수술 경험을 바탕으로 현재 모양과 피부 여유도를 함께 살핍니다.",
+  },
+  {
+    number: "04",
+    title: "봉합부까지 고려",
+    copy: "봉합 자리에 피부 터널이 생길 가능성을 줄이기 위한 세밀한 봉합 설계를 적용합니다.",
+  },
+  {
+    number: "05",
+    title: "표재근막 보존",
+    copy: "표피층을 정교하게 다루고 진피와 표재근막층은 가능한 보존하는 방향을 우선합니다.",
   },
 ];
 
@@ -56,8 +100,16 @@ const protocol = [
 
 const faqs = [
   {
+    q: "포경수술은 성인이라면 꼭 해야 하나요?",
+    a: "모든 성인에게 일률적으로 필요한 수술은 아닙니다. 진성포경, 반복되는 귀두포피염, 감돈포경, 지속적인 위생 불편이 있다면 비뇨의학과 진료를 통해 필요성을 판단하는 것이 좋습니다.",
+  },
+  {
+    q: "수술 시간과 마취 방법은 어떻게 되나요?",
+    a: "본원 안내 기준으로 국소마취 후 약 20분 내외로 진행되는 경우가 많습니다. 불안감이 큰 경우에는 상담 후 각성하 반수면을 선택적으로 고려할 수 있으며, 실제 시간과 마취 방법은 개인 상태에 따라 달라집니다.",
+  },
+  {
     q: "수술 시 통증이 심한가요?",
-    a: "단계별 무통 국소마취 시스템을 시행하여 수술 중은 물론 수술 후 통증까지 줄이는 데 집중합니다.",
+    a: "국소마취를 기본으로 수술 중 통증 부담을 줄이는 데 집중합니다. 수술 후에는 개인에 따라 뻐근함이나 불편감이 있을 수 있어 처방과 관리 안내를 따르는 것이 중요합니다.",
   },
   {
     q: "회복 기간은 얼마나 걸리나요?",
@@ -108,9 +160,10 @@ export default function Home() {
             />
           </a>
           <nav className="desktop-nav" aria-label="주요 메뉴">
+            <a href="#indications">수술이 필요한 경우</a>
             <a href="#design">맞춤 디자인</a>
             <a href="#preservation">표재근막 보존</a>
-            <a href="#protocol">수술 프로토콜</a>
+            <a href="#jj-method">JJ 수술 방식</a>
             <a href="#faq">FAQ</a>
           </nav>
           <a className="header-cta" href={KAKAO_URL} target="_blank" rel="noreferrer">
@@ -176,6 +229,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="procedure-facts" aria-label="포경수술 기본 안내">
+        <div className="shell facts-grid">
+          <div>
+            <span>ANESTHESIA</span>
+            <strong>국소마취</strong>
+            <p>불안감이 큰 경우 반수면 방식 선택 상담</p>
+          </div>
+          <div>
+            <span>PROCEDURE</span>
+            <strong>약 20분 내외</strong>
+            <p>수술 범위와 개인 상태에 따라 달라질 수 있음</p>
+          </div>
+          <div>
+            <span>DAILY LIFE</span>
+            <strong>당일 가벼운 일상</strong>
+            <p>격한 운동과 성생활은 회복 경과 확인 후</p>
+          </div>
+        </div>
+      </section>
+
       <section className="intro section">
         <div className="shell intro-grid">
           <div className="intro-mark" aria-hidden="true">
@@ -196,6 +269,48 @@ export default function Home() {
               만족도를 함께 고려합니다.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section id="indications" className="section indication-section">
+        <div className="shell">
+          <SectionHeading
+            eyebrow="DO I NEED CIRCUMCISION?"
+            title={
+              <>
+                포경수술,
+                <br />
+                모두에게 필요한 것은 아닙니다
+              </>
+            }
+            description="성인이 되어 자연스럽게 포피가 젖혀지고 위생 관리와 성생활에 불편이 없다면 일률적으로 수술할 필요는 없습니다. 다만 아래 증상이 있다면 정확한 진단을 권합니다."
+          />
+          <div className="indication-grid">
+            <article>
+              <span>01</span>
+              <h3>진성포경</h3>
+              <p>포피 입구가 너무 좁아 귀두 뒤로 충분히 젖혀지지 않는 경우</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>재발성 귀두포피염</h3>
+              <p>귀두와 포피의 염증, 분비물, 냄새가 반복되어 일상에 불편한 경우</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>감돈포경</h3>
+              <p>뒤로 젖혀진 포피가 링처럼 음경을 조여 붓기와 통증을 만드는 경우</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>지속적인 위생 불편</h3>
+              <p>포피 사이의 구지와 악취로 청결 관리가 어렵거나 불편이 반복되는 경우</p>
+            </article>
+          </div>
+          <p className="medical-alert">
+            갑작스러운 심한 부종·통증·피부색 변화가 동반된 감돈포경은
+            지체하지 말고 의료기관의 진료를 받아야 합니다.
+          </p>
         </div>
       </section>
 
@@ -220,8 +335,14 @@ export default function Home() {
                   <span className="design-line" />
                   <span className="design-zone" />
                 </div>
+                {design.recommended ? <span className="recommend-badge">BALANCED CHOICE</span> : null}
                 <h3>{design.title}</h3>
                 <p>{design.label}</p>
+                <ul>
+                  <li>{design.scar}</li>
+                  <li>{design.fit}</li>
+                </ul>
+                <small>{design.note}</small>
               </article>
             ))}
           </div>
@@ -291,6 +412,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="jj-method" className="section clinic-method-section">
+        <div className="shell">
+          <SectionHeading
+            eyebrow="THE JJ DIFFERENCE"
+            title="JJ비뇨기과는 수술의 전 과정을 봅니다"
+            description="마취 선택부터 절제, 지혈, 봉합, 조직 보존까지 각 단계가 회복과 결과에 영향을 줄 수 있어 하나의 과정으로 설계합니다."
+          />
+          <div className="method-grid">
+            {clinicMethods.map((method) => (
+              <article key={method.title}>
+                <span>{method.number}</span>
+                <h3>{method.title}</h3>
+                <p>{method.copy}</p>
+              </article>
+            ))}
+          </div>
+          <p className="method-note">
+            적용 가능한 마취 및 수술 방식은 문진과 진찰 후 의료진이 안내합니다.
+          </p>
+        </div>
+      </section>
+
       <section id="protocol" className="section protocol-section">
         <div className="shell">
           <SectionHeading
@@ -350,29 +493,30 @@ export default function Home() {
       <section className="section candidate-section">
         <div className="shell candidate-grid">
           <div>
-            <p className="eyebrow">WHO IS IT FOR?</p>
+            <p className="eyebrow">EXPECTED BENEFITS</p>
             <h2>
-              성인 포경수술,
+              수술 전,
               <br />
-              이런 분께 권합니다
+              기대와 한계를 함께 확인합니다
             </h2>
             <p>
-              불편을 참고 미루기보다 현재 상태와 필요한 수술 범위를 정확히
-              확인하는 것이 먼저입니다.
+              포경수술은 위생 관리와 반복 염증 감소에 도움을 줄 수 있지만,
+              모든 증상을 해결하는 수술은 아닙니다. 현재 불편의 원인을 먼저
+              구분해야 합니다.
             </p>
           </div>
           <ul>
             <li>
-              <span>01</span>반복되는 만성 염증이 걱정되는 분
+              <span>01</span>위생 관리가 쉬워질 수 있습니다
             </li>
             <li>
-              <span>02</span>위생 관리나 악취 문제로 불편한 분
+              <span>02</span>귀두·포피의 반복 염증 부담을 줄이는 데 도움을 줄 수 있습니다
             </li>
             <li>
-              <span>03</span>외형과 모양 개선을 원하는 분
+              <span>03</span>원하는 흉터 위치와 피부 여유도를 사전에 설계합니다
             </li>
             <li>
-              <span>04</span>이전 수술 후 재수술을 고려하는 분
+              <span>04</span>성병 예방을 위해서는 수술 후에도 안전한 성생활이 필요합니다
             </li>
           </ul>
         </div>
@@ -431,6 +575,32 @@ export default function Home() {
                 <p>{faq.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section visit-section">
+        <div className="shell visit-grid">
+          <div>
+            <p className="eyebrow">CONTACT &amp; LOCATION</p>
+            <h2>상담부터 수술·회복까지<br />한 공간에서 이어집니다</h2>
+          </div>
+          <div className="visit-details">
+            <div>
+              <span>ADDRESS</span>
+              <strong>서울특별시 강남구 강남대로 238<br />스카이쏠라빌딩 13·14층</strong>
+              <p>진료·상담 14층 / 수술실·회복실 13층</p>
+            </div>
+            <div>
+              <span>SUBWAY</span>
+              <strong>3호선·신분당선 양재역 4번 출구</strong>
+              <p>출구 바로 왼쪽 양재미소약국 건물</p>
+            </div>
+            <div>
+              <span>CONTACT</span>
+              <strong>1599-5952</strong>
+              <p>일요일·공휴일 휴무 / 방문 전 예약 권장</p>
+            </div>
           </div>
         </div>
       </section>

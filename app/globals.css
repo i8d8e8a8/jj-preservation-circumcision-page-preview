@@ -280,6 +280,51 @@ img {
   font-weight: 600;
 }
 
+.procedure-facts {
+  position: relative;
+  z-index: 3;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.facts-grid > div {
+  min-height: 156px;
+  border-right: 1px solid var(--line);
+  padding: 34px 38px;
+}
+
+.facts-grid > div:first-child {
+  border-left: 1px solid var(--line);
+}
+
+.facts-grid span,
+.visit-details span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.facts-grid strong {
+  display: block;
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.facts-grid p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .section {
   padding-block: 112px;
 }
@@ -344,6 +389,53 @@ img {
 
 .intro-copy p:last-child {
   margin-bottom: 0;
+}
+
+.indication-section {
+  background: var(--mist);
+}
+
+.indication-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.indication-grid article {
+  min-height: 250px;
+  border: 1px solid #d7e3e9;
+  border-radius: 18px;
+  background: var(--white);
+  padding: 30px 28px;
+}
+
+.indication-grid article > span {
+  color: #a6bfcc;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.indication-grid h3 {
+  margin: 54px 0 14px;
+  color: var(--navy);
+  font-size: 20px;
+}
+
+.indication-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.medical-alert {
+  margin: 24px 0 0;
+  border-left: 3px solid var(--blue);
+  background: #e6f0f5;
+  padding: 18px 22px;
+  color: #405966;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .design-section {
@@ -463,6 +555,49 @@ img {
   margin: 0 22px 24px;
   color: var(--muted);
   font-size: 12px;
+}
+
+.design-card .recommend-badge {
+  display: inline-flex;
+  margin: 20px 22px 0;
+  border-radius: 999px;
+  background: #e8f3f8;
+  padding: 7px 10px;
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.design-card .recommend-badge + h3 {
+  margin-top: 12px;
+}
+
+.design-card ul {
+  display: grid;
+  min-height: 112px;
+  margin: 0;
+  gap: 9px;
+  border-top: 1px solid var(--line);
+  padding: 20px 22px 16px 38px;
+  color: #506673;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.design-card li::marker {
+  color: var(--blue);
+}
+
+.design-card small {
+  display: block;
+  min-height: 64px;
+  background: var(--mist);
+  padding: 15px 22px;
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.55;
 }
 
 .decision-card {
@@ -647,6 +782,53 @@ img {
   color: rgba(255, 255, 255, 0.64);
   font-size: 13px;
   line-height: 1.8;
+}
+
+.clinic-method-section {
+  background: var(--white);
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.method-grid article {
+  min-height: 285px;
+  border-right: 1px solid var(--line);
+  padding: 30px 24px;
+}
+
+.method-grid article:last-child {
+  border-right: 0;
+}
+
+.method-grid span {
+  color: #a9c2cf;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.method-grid h3 {
+  margin: 68px 0 15px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.method-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.method-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
 }
 
 .protocol-section {
@@ -973,6 +1155,54 @@ img {
   line-height: 1.8;
 }
 
+.visit-section {
+  background: var(--white);
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 90px;
+}
+
+.visit-grid h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(31px, 4vw, 44px);
+  letter-spacing: -0.045em;
+  line-height: 1.35;
+}
+
+.visit-details {
+  border-top: 1px solid var(--line);
+}
+
+.visit-details > div {
+  display: grid;
+  min-height: 138px;
+  grid-template-columns: 110px 1fr;
+  align-content: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.visit-details span {
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+}
+
+.visit-details strong {
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.visit-details p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .final-cta {
   position: relative;
   overflow: hidden;
@@ -1100,6 +1330,27 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .indication-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 0;
+  }
+
+  .method-grid article {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .method-grid article:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .method-grid article:last-child {
+    grid-column: 1 / -1;
+  }
+
   .preservation-grid,
   .doctor-grid {
     gap: 50px;
@@ -1138,7 +1389,8 @@ footer {
   }
 
   .candidate-grid,
-  .faq-grid {
+  .faq-grid,
+  .visit-grid {
     gap: 60px;
   }
 }
@@ -1238,6 +1490,23 @@ footer {
     font-size: 10px;
   }
 
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-grid > div,
+  .facts-grid > div:first-child {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    border-left: 0;
+    padding: 24px 4px;
+  }
+
+  .facts-grid > div:last-child {
+    border-bottom: 0;
+  }
+
   .section {
     padding-block: 82px;
   }
@@ -1280,8 +1549,20 @@ footer {
   }
 
   .design-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .indication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .indication-grid article {
+    min-height: 220px;
+  }
+
+  .indication-grid h3 {
+    margin-top: 44px;
   }
 
   .design-visual {
@@ -1313,6 +1594,23 @@ footer {
     line-height: 1.5;
   }
 
+  .design-card .recommend-badge {
+    margin: 14px 14px 0;
+    font-size: 8px;
+  }
+
+  .design-card ul {
+    min-height: 148px;
+    padding: 16px 12px 14px 28px;
+    font-size: 9px;
+  }
+
+  .design-card small {
+    min-height: 76px;
+    padding: 13px 14px;
+    font-size: 9px;
+  }
+
   .decision-card {
     grid-template-columns: 1fr;
     padding: 26px;
@@ -1326,8 +1624,30 @@ footer {
   .preservation-grid,
   .candidate-grid,
   .doctor-grid,
-  .faq-grid {
+  .faq-grid,
+  .visit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-grid article,
+  .method-grid article:nth-child(2n),
+  .method-grid article:last-child {
+    min-height: 0;
+    grid-column: auto;
+    border-right: 0;
+    padding: 28px 4px;
+  }
+
+  .method-grid h3 {
+    margin-top: 28px;
+  }
+
+  .method-note {
+    text-align: left;
   }
 
   .section-heading.inverse {
@@ -1382,6 +1702,20 @@ footer {
 
   .faq-heading {
     text-align: center;
+  }
+
+  .visit-grid {
+    gap: 42px;
+  }
+
+  .visit-details > div {
+    grid-template-columns: 1fr;
+    padding: 24px 0;
+  }
+
+  .visit-details span {
+    grid-row: auto;
+    margin-bottom: 10px;
   }
 
   .faq-list summary {
