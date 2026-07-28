@@ -226,34 +226,10 @@ function SectionHeading({
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <div className="shell header-inner">
-          <a className="brand" href="#top" aria-label="JJ비뇨기과 포경수술 페이지 상단">
-            <Image
-              src={`${ASSET_BASE}/brand/jj-horizontal.png`}
-              alt="JJ비뇨기과"
-              width={170}
-              height={44}
-              priority
-            />
-          </a>
-          <nav className="desktop-nav" aria-label="주요 메뉴">
-            <a href="#indications">수술이 필요한 경우</a>
-            <a href="#design">맞춤 디자인</a>
-            <a href="#preservation">표재근막 보존</a>
-            <a href="#jj-method">JJ 수술 방식</a>
-            <a href="#faq">FAQ</a>
-          </nav>
-          <a className="header-cta" href={KAKAO_URL} target="_blank" rel="noreferrer">
-            빠른 상담
-          </a>
-        </div>
-      </header>
-
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
-            src={`${ASSET_BASE}/doctor/consultation-medical.png`}
+            src={`${ASSET_BASE}/doctor-procedure-skyblue-v8.webp`}
             alt=""
             fill
             priority
@@ -841,10 +817,10 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-procedure-real-dark-v7.webp`}
+              src={`${ASSET_BASE}/doctor-procedure-skyblue-v8.webp`}
               alt="어두운 수술실에서 전기 소작기 핸드피스로 정밀 수술을 진행하는 강태진 대표원장"
               fill
-              sizes="(max-width: 760px) 100vw, 1180px"
+              sizes="(max-width: 760px) 100vw, 44vw"
             />
             <span>남성수술 20년 이상</span>
           </div>
@@ -941,22 +917,6 @@ export default function Home() {
           <small>사전 예약제로 운영되며 상담 내용은 철저히 보호됩니다.</small>
         </div>
       </section>
-
-      <footer>
-        <div className="shell footer-inner">
-          <Image
-            src={`${ASSET_BASE}/brand/jj-horizontal.png`}
-            alt="JJ비뇨기과"
-            width={150}
-            height={38}
-          />
-          <p>
-            본 페이지의 내용은 일반적인 의료 정보이며, 실제 수술 방법과 회복
-            기간은 개인의 상태와 의료진의 판단에 따라 달라질 수 있습니다.
-          </p>
-          <span>© JJ UROLOGY. ALL RIGHTS RESERVED.</span>
-        </div>
-      </footer>
 
       <div className="mobile-bar" aria-label="빠른 상담">
         <a href={PHONE_HREF}>전화 상담</a>

@@ -118,14 +118,14 @@ img {
 
 .hero-image {
   object-fit: cover;
-  object-position: 66% 42%;
-  filter: saturate(0.78) contrast(0.98);
+  object-position: center;
+  filter: saturate(0.92) contrast(1.02);
 }
 
 .hero-wash {
   background:
-    linear-gradient(90deg, #f8fafb 4%, rgba(248, 250, 251, 0.97) 34%, rgba(248, 250, 251, 0.48) 65%, rgba(248, 250, 251, 0.08) 100%),
-    linear-gradient(0deg, rgba(9, 42, 65, 0.06), transparent 32%);
+    linear-gradient(90deg, rgba(3, 18, 29, 0.96) 0%, rgba(3, 18, 29, 0.88) 38%, rgba(3, 18, 29, 0.42) 63%, rgba(3, 18, 29, 0.08) 100%),
+    linear-gradient(0deg, rgba(3, 18, 29, 0.42), transparent 38%);
 }
 
 .hero-inner {
@@ -150,9 +150,13 @@ img {
   letter-spacing: 0.18em;
 }
 
+.hero .hero-kicker {
+  color: #8fd5f6;
+}
+
 .hero h1 {
   margin: 0;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.86);
   font-size: clamp(38px, 5vw, 66px);
   font-weight: 400;
   letter-spacing: -0.055em;
@@ -173,7 +177,7 @@ img {
   width: max-content;
   max-width: 100%;
   margin-top: 8px;
-  color: var(--navy);
+  color: var(--white);
   font-weight: 900;
 }
 
@@ -185,15 +189,32 @@ img {
   z-index: -1;
   height: 0.2em;
   border-radius: 20px;
-  background: rgba(28, 98, 143, 0.12);
+  background: rgba(93, 187, 233, 0.34);
   content: "";
 }
 
 .hero-lead {
   margin: 28px 0 0;
-  color: #506571;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   line-height: 1.75;
+}
+
+.hero .button.primary {
+  background: #f8fbfd;
+  color: var(--navy);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+.hero .button.secondary {
+  border-color: rgba(255, 255, 255, 0.52);
+  background: rgba(4, 27, 43, 0.44);
+  color: var(--white);
+  backdrop-filter: blur(10px);
+}
+
+.hero .privacy-note {
+  color: rgba(255, 255, 255, 0.64);
 }
 
 .hero-actions,
@@ -1141,14 +1162,14 @@ img {
 
 .doctor-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 58px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+  gap: 72px;
 }
 
 .doctor-photo {
   position: relative;
-  min-height: 0;
-  aspect-ratio: 16 / 9;
+  min-height: 570px;
   overflow: hidden;
   border-radius: 24px;
   background: #071725;
@@ -1156,7 +1177,7 @@ img {
 
 .doctor-photo img {
   object-fit: cover;
-  object-position: center;
+  object-position: 82% center;
 }
 
 .doctor-photo::after {
@@ -1192,9 +1213,12 @@ img {
 }
 
 .doctor-copy {
-  width: min(880px, 100%);
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  text-align: left;
 }
 
 .doctor-copy > p {
@@ -1208,12 +1232,12 @@ img {
   display: flex;
   margin-top: 28px;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 13px;
 }
 
 .doctor-copy .text-link {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .doctor-sign span {
@@ -1737,12 +1761,12 @@ footer {
   }
 
   .hero-image {
-    object-position: 63% top;
+    object-position: 74% top;
   }
 
   .hero-wash {
     background:
-      linear-gradient(0deg, #f8fafb 8%, rgba(248, 250, 251, 0.97) 45%, rgba(248, 250, 251, 0.45) 75%, rgba(248, 250, 251, 0.12) 100%);
+      linear-gradient(0deg, rgba(3, 18, 29, 0.97) 8%, rgba(3, 18, 29, 0.9) 44%, rgba(3, 18, 29, 0.42) 76%, rgba(3, 18, 29, 0.12) 100%);
   }
 
   .hero-inner {
@@ -2010,7 +2034,7 @@ footer {
 
   .doctor-photo {
     min-height: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 5;
   }
 
   .doctor-copy {
