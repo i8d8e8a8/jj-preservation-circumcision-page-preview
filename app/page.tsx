@@ -328,7 +328,7 @@ export default function Home() {
               <span>01</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-phimosis-v2.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-phimosis-v3.webp`}
                   alt=""
                   fill
                   sizes="128px"
@@ -341,7 +341,7 @@ export default function Home() {
               <span>02</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-inflammation-v2.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-inflammation-v3.webp`}
                   alt=""
                   fill
                   sizes="128px"
@@ -367,7 +367,7 @@ export default function Home() {
               <span>04</span>
               <div className="indication-icon">
                 <Image
-                  src={`${ASSET_BASE}/generated-icons/indication-hygiene-v2.webp`}
+                  src={`${ASSET_BASE}/generated-icons/indication-hygiene-v3.webp`}
                   alt=""
                   fill
                   sizes="128px"
