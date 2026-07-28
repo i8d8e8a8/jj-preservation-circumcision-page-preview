@@ -328,12 +328,17 @@ export default function Home() {
             description="모든 수술을 같은 방식으로 진행하지 않습니다. 개인의 음경 해부학적 특징과 원하는 결과를 고려해 적합한 디자인을 선택합니다."
           />
           <div className="design-grid">
-            {designs.map((design) => (
+            {designs.map((design, index) => (
               <article className={`design-card ${design.tone}`} key={design.title}>
-                <div className="design-visual" aria-hidden="true">
+                <div className="design-visual">
+                  <Image
+                    src={`${ASSET_BASE}/medical/circumcision-design-types.png`}
+                    alt={`${design.title}: ${design.label} 의료 도식`}
+                    fill
+                    sizes="(max-width: 760px) 100vw, 25vw"
+                    className={`design-medical-image design-panel-${index + 1}`}
+                  />
                   <span className="design-code">{design.code}</span>
-                  <span className="design-line" />
-                  <span className="design-zone" />
                 </div>
                 {design.recommended ? <span className="recommend-badge">BALANCED CHOICE</span> : null}
                 <h3>{design.title}</h3>
@@ -392,13 +397,20 @@ export default function Home() {
           </div>
           <div className="anatomy-card">
             <div className="anatomy-badge">DARTOS FASCIA</div>
-            <div className="anatomy-visual" aria-hidden="true">
-              <span className="layer skin">피부층</span>
-              <span className="layer fascia">표재근막</span>
-              <span className="layer vessel">미세혈관망</span>
-              <span className="pulse one" />
-              <span className="pulse two" />
-              <span className="pulse three" />
+            <div className="anatomy-visual">
+              <Image
+                src={`${ASSET_BASE}/medical/superficial-fascia-preservation.png`}
+                alt="피부층 아래의 표재근막과 그 안의 미세혈관·신경 조직을 보존하는 원리를 보여주는 단면 의료 도식"
+                fill
+                sizes="(max-width: 760px) 100vw, 55vw"
+                className="fascia-medical-image"
+              />
+              <span className="treatment-label">선택적 피부 절제 범위</span>
+              <div className="anatomy-legend">
+                <span className="legend-skin">피부·진피층</span>
+                <span className="legend-fascia">표재근막 보존</span>
+                <span className="legend-vessel">미세혈관·신경망</span>
+              </div>
             </div>
             <div className="anatomy-copy">
               <h3>표재근막 보존 포경수술</h3>
