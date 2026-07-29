@@ -232,13 +232,11 @@ export default function Home() {
               <svg viewBox="0 0 64 64">
                 <circle className="fact-pulse pulse-one" cx="32" cy="32" r="23" />
                 <circle className="fact-pulse pulse-two" cx="32" cy="32" r="16" />
-                <g className="syringe">
-                  <path d="m22 39 17-17" />
-                  <path d="m35 18 11 11" />
-                  <path d="m39 14 11 11" />
-                  <path d="m44 19 5-5" />
-                  <path d="m18 43-4 7 7-4" />
-                  <path d="m26 35 5 5" />
+                <g className="anesthesia-target">
+                  <circle cx="32" cy="32" r="13" />
+                  <circle cx="32" cy="32" r="4" />
+                  <path d="M32 14v7M32 43v7M14 32h7M43 32h7" />
+                  <path className="anesthesia-plus" d="M46 15v8M42 19h8" />
                 </g>
               </svg>
             </div>
@@ -254,10 +252,9 @@ export default function Home() {
                 <circle className="clock-face" cx="32" cy="34" r="20" />
                 <path className="clock-crown" d="M26 10h12M32 10v4" />
                 <path className="clock-tick" d="M32 18v3M48 34h-3M32 50v-3M16 34h3" />
-                <g className="clock-hands">
-                  <path d="M32 34V23" />
-                  <path d="m32 34 9 5" />
-                </g>
+                <path className="clock-range" d="M32 14a20 20 0 0 1 17.32 30" />
+                <path className="clock-hand" d="M32 34V22" />
+                <circle className="clock-center" cx="32" cy="34" r="2.5" />
               </svg>
             </div>
             <div className="fact-copy">
@@ -269,15 +266,14 @@ export default function Home() {
           <div className="fact-card fact-daily">
             <div className="fact-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64">
-                <path className="daily-path" d="M12 49h40" />
-                <g className="walker">
-                  <circle cx="36" cy="15" r="5" />
-                  <path d="m33 24-5 11 8 4 5-9" />
-                  <path d="m28 35-8 12" />
-                  <path d="m36 39 10 10" />
-                  <path d="m31 26-10 6" />
+                <g className="daily-home">
+                  <path d="m15 31 17-14 17 14" />
+                  <path d="M20 29v20h24V29" />
+                  <path d="M28 49V37h8v12" />
                 </g>
-                <path className="daily-arrow" d="m45 23 7 5-7 5" />
+                <path className="daily-check" d="m25 32 5 5 10-11" />
+                <path className="daily-motion motion-one" d="M13 20h8" />
+                <path className="daily-motion motion-two" d="M10 26h7" />
               </svg>
             </div>
             <div className="fact-copy">

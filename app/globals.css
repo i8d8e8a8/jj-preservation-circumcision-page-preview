@@ -451,47 +451,82 @@ img {
 }
 
 .fact-card.is-visible .pulse-one {
-  animation: anesthesiaPulse 2.8s ease-out 0.2s infinite;
+  animation: anesthesiaPulse 1.5s ease-out 0.15s 1;
 }
 
 .fact-card.is-visible .pulse-two {
-  animation: anesthesiaPulse 2.8s ease-out 1s infinite;
+  animation: anesthesiaPulse 1.5s ease-out 0.45s 1;
 }
 
-.fact-card.is-visible .syringe {
+.anesthesia-target {
   transform-box: fill-box;
   transform-origin: center;
-  animation: syringeSettle 3.4s ease-in-out infinite;
 }
 
-.clock-hands {
+.fact-card.is-visible .anesthesia-target {
+  animation: anesthesiaFocus 1.15s cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+.anesthesia-plus {
+  stroke: #13a7c8;
+}
+
+.clock-range {
+  stroke: #17a8c9;
+  stroke-width: 5;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 64;
+}
+
+.clock-hand {
   transform-origin: 32px 34px;
 }
 
-.fact-card.is-visible .clock-hands {
-  animation: clockSweep 4s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+.fact-card.is-visible .clock-range {
+  animation: clockRangeFill 1.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
 }
 
-.fact-card.is-visible .clock-face {
-  animation: clockGlow 2s ease-in-out infinite;
+.fact-card.is-visible .clock-hand {
+  animation: clockHandToFour 1.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
 }
 
-.walker {
-  transform-origin: center;
+.clock-center {
+  fill: #1b74aa;
 }
 
-.fact-card.is-visible .walker {
-  animation: walkerStep 2.6s ease-in-out infinite;
+.daily-home {
+  transform-origin: 32px 49px;
 }
 
-.fact-card.is-visible .daily-arrow {
-  animation: arrowAdvance 2.6s ease-in-out infinite;
+.daily-check {
+  stroke: #12a4c6;
+  stroke-width: 3.2;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
 }
 
-.fact-card.is-visible .daily-path {
-  stroke-dasharray: 40;
-  stroke-dashoffset: 40;
-  animation: pathDraw 2.6s ease-in-out infinite;
+.daily-motion {
+  opacity: 0;
+}
+
+.fact-card.is-visible .daily-home {
+  animation: dailyHomeSettle 1.15s cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+.fact-card.is-visible .daily-check {
+  animation: dailyCheckDraw 0.75s ease-out 0.45s forwards;
+}
+
+.fact-card.is-visible .daily-motion {
+  animation: dailyMotionLine 0.9s ease-out forwards;
+}
+
+.fact-card.is-visible .daily-motion.motion-one {
+  animation-delay: 0.15s;
+}
+
+.fact-card.is-visible .daily-motion.motion-two {
+  animation-delay: 0.28s;
 }
 
 .section {
@@ -1071,11 +1106,11 @@ img {
 
 .preservation-focus-frame {
   position: absolute;
-  top: 3.2%;
-  right: 1.5%;
-  bottom: 15.5%;
+  top: 22.5%;
+  right: 2.2%;
+  bottom: 23.2%;
   z-index: 4;
-  width: 31.5%;
+  width: 31.8%;
   overflow: hidden;
   border: 2px solid rgba(31, 134, 184, 0);
   border-radius: 22px;
@@ -1115,7 +1150,6 @@ img {
   font-size: 11px;
   font-weight: 900;
   box-shadow: 0 8px 20px rgba(12, 72, 109, 0.2);
-  backdrop-filter: blur(8px);
 }
 
 .preservation-focus-frame.is-active {
@@ -3008,18 +3042,24 @@ body {
 /* Responsive motion system */
 .motion-enabled .motion-reveal {
   opacity: 0;
-  filter: blur(5px);
   transform: translateY(34px) scale(0.985);
   transition:
     opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: calc(var(--reveal-order, 0) * 65ms);
 }
 
 .motion-enabled .motion-reveal.is-visible {
   opacity: 1;
-  filter: blur(0);
+  transform: none;
+}
+
+.motion-enabled .faq-list details.motion-reveal {
+  transform: translateY(22px);
+  transition-delay: calc(var(--reveal-order, 0) * 110ms);
+}
+
+.motion-enabled .faq-list details.motion-reveal.is-visible {
   transform: none;
 }
 
@@ -3109,77 +3149,74 @@ body {
   }
 }
 
-@keyframes syringeSettle {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  45% {
-    transform: translate(2px, -2px) rotate(-3deg);
-  }
-  62% {
-    transform: translate(-1px, 1px) rotate(1deg);
-  }
-}
-
-@keyframes clockSweep {
+@keyframes anesthesiaFocus {
   0% {
-    transform: rotate(0deg);
+    opacity: 0.45;
+    transform: scale(0.76);
   }
-  70%,
+  65% {
+    transform: scale(1.08);
+  }
   100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes clockGlow {
-  0%,
-  100% {
-    stroke: #176d9d;
-    filter: none;
-  }
-  50% {
-    stroke: #10a7c8;
-    filter: drop-shadow(0 0 4px rgba(16, 167, 200, 0.45));
-  }
-}
-
-@keyframes walkerStep {
-  0%,
-  100% {
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  50% {
-    transform: translateX(4px) rotate(1deg);
-  }
-}
-
-@keyframes arrowAdvance {
-  0%,
-  28% {
-    opacity: 0;
-    transform: translateX(-8px);
-  }
-  52%,
-  80% {
     opacity: 1;
-    transform: translateX(2px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(8px);
+    transform: scale(1);
   }
 }
 
-@keyframes pathDraw {
+@keyframes clockRangeFill {
   0% {
-    stroke-dashoffset: 36;
-    opacity: 0.35;
+    stroke-dashoffset: 64;
+    opacity: 0.45;
   }
-  55%,
   100% {
     stroke-dashoffset: 0;
     opacity: 1;
+  }
+}
+
+@keyframes clockHandToFour {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes dailyHomeSettle {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+  70% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dailyCheckDraw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dailyMotionLine {
+  0% {
+    opacity: 0;
+    transform: translateX(7px);
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.75;
+    transform: translateX(0);
   }
 }
 
@@ -3209,12 +3246,10 @@ body {
 @keyframes heroContentIn {
   from {
     opacity: 0;
-    filter: blur(7px);
     transform: translateY(24px);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -3222,12 +3257,10 @@ body {
 @keyframes heroImageSettle {
   from {
     opacity: 0;
-    filter: blur(9px);
     transform: translateX(34px) scale(1.035);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }

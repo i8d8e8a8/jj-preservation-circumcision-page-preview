@@ -35,19 +35,20 @@ export default function MotionObserver() {
     root.classList.add("motion-enabled");
     revealTargets.forEach((target, index) => {
       target.classList.add("motion-reveal");
-      target.style.setProperty("--reveal-order", String(index % 5));
+      const revealOrder = target.matches(".faq-list details")
+        ? Array.from(target.parentElement?.children ?? []).indexOf(target)
+        : index % 5;
+      target.style.setProperty("--reveal-order", String(revealOrder));
     });
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
         });
       },
       {
-        rootMargin: "0px 0px -8% 0px",
+        rootMargin: "-5% 0px -8% 0px",
         threshold: 0.12,
       },
     );
