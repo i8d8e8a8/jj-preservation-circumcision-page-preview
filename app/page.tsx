@@ -9,7 +9,7 @@ const designs = [
     code: "L · L",
     title: "Low & Loose",
     label: "낮은 절개선 · 여유 있는 디자인",
-    image: "low-loose-clean.webp",
+    image: "circum-type-low-loose-v2.webp",
     summary:
       "봉합선은 귀두 가까이에 두면서 피부는 여유 있게 남기는 형태입니다. 흉터가 비교적 안쪽에 자리하고 평상시에는 자연스러운 주름이 남는 것이 특징입니다.",
     details: [
@@ -34,7 +34,7 @@ const designs = [
     code: "L · T",
     title: "Low & Tight",
     label: "낮은 절개선 · 탄탄한 디자인",
-    image: "low-tight-clean.webp",
+    image: "circum-type-low-tight-v2.webp",
     summary:
       "봉합선은 귀두 가까이에 두고 피부 주름은 적게 남기는 형태입니다. 평상시 표면이 매끈하고 정돈되어 보이는 외형을 선호할 때 고려할 수 있습니다.",
     details: [
@@ -59,7 +59,7 @@ const designs = [
     code: "H · L",
     title: "High & Loose",
     label: "높은 절개선 · 여유 있는 디자인",
-    image: "high-loose-clean.webp",
+    image: "circum-type-high-loose-v2.webp",
     summary:
       "봉합선이 음경 몸통 중간 쪽에 위치하고 피부를 넉넉히 남기는 형태입니다. 전체적인 피부 움직임과 주름이 네 가지 유형 중 비교적 많은 편입니다.",
     details: [
@@ -84,7 +84,7 @@ const designs = [
     code: "H · T",
     title: "High & Tight",
     label: "높은 절개선 · 탄탄한 디자인",
-    image: "high-tight-clean.webp",
+    image: "circum-type-high-tight-v2.webp",
     summary:
       "봉합선은 음경 몸통 중간 쪽에 두면서 피부 주름을 적게 남기는 형태입니다. 절개선의 위치가 비교적 높고 표면은 팽팽하게 정돈됩니다.",
     details: [
