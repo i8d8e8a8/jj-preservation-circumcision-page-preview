@@ -272,17 +272,17 @@ export default function Home() {
           <div>
             <span>ANESTHESIA</span>
             <strong>국소마취</strong>
-            <p>불안감이 큰 경우 반수면 방식 선택 상담</p>
+            <p>수술 중 통증 부담을 낮춰 편안하게 진행</p>
           </div>
           <div>
             <span>PROCEDURE</span>
             <strong>약 20분 내외</strong>
-            <p>수술 범위와 개인 상태에 따라 달라질 수 있음</p>
+            <p>디자인부터 미세 봉합까지 효율적인 수술 과정</p>
           </div>
           <div>
             <span>DAILY LIFE</span>
             <strong>당일 가벼운 일상</strong>
-            <p>격한 운동과 성생활은 회복 경과 확인 후</p>
+            <p>입원 부담 없이 빠르게 일상으로 복귀</p>
           </div>
         </div>
       </section>
