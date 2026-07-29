@@ -531,7 +531,7 @@ export default function Home() {
             </div>
             <div className="anatomy-visual">
               <Image
-                src={`${ASSET_BASE}/medical/circumcision-layer-comparison-v5.png`}
+                src={`${ASSET_BASE}/medical/circumcision-layer-comparison-v6.png`}
                 alt="왼쪽 일반적인 깊은 절제 예시, 가운데 음경 횡단면, 오른쪽 피부와 진피만 들어 올리고 표재근막을 남긴 보존 절제 예시를 비교한 의료 도식"
                 fill
                 sizes="(max-width: 760px) 100vw, 1160px"
