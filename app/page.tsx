@@ -26,7 +26,7 @@ const designs = [
         value: "내측 피부가 과도하게 남지 않으면서도 자연스러운 주름과 움직임을 유지합니다.",
       },
     ],
-    note: "귀두가 다시 덮일 가능성과 발기 시 여유도를 함께 고려할 수 있어 JJ비뇨기과에서 우선적으로 설명하는 균형형 디자인입니다.",
+    note: "귀두가 다시 덮일 가능성과 발기 시 피부 여유도를 함께 비교할 수 있어 상담 시 기준으로 설명하는 균형형 디자인입니다.",
     tone: "soft",
     recommended: true,
   },
@@ -48,7 +48,7 @@ const designs = [
       },
       {
         label: "형태적 특징",
-        value: "국내에서 흔히 접할 수 있는 형태지만 절제량이 많아지지 않도록 정확한 측정이 중요합니다.",
+        value: "주름을 적게 남기는 형태인 만큼 절제량이 과도해지지 않도록 정확한 측정이 중요합니다.",
       },
     ],
     note: "발기 시 길이와 피부 탄력을 충분히 확인하지 않으면 당김이나 불편감이 생길 수 있어 수술 전 여유도 측정이 특히 중요합니다.",
@@ -107,67 +107,6 @@ const designs = [
   },
 ];
 
-const clinicMethods = [
-  {
-    number: "01",
-    icon: "method-sedation.webp",
-    title: "선택적 반수면",
-    copy: "불안감이 큰 경우 상태와 요청을 확인한 뒤 각성하 반수면 방식을 선택적으로 고려합니다.",
-  },
-  {
-    number: "02",
-    icon: "method-dissection.webp",
-    title: "확인하며 절제·지혈",
-    copy: "조직의 위치와 깊이를 직접 확인하면서 필요한 층을 절제하고 단계적으로 지혈합니다.",
-  },
-  {
-    number: "03",
-    icon: "method-design.webp",
-    title: "개인 맞춤 심미 디자인",
-    copy: "다양한 음경 재건수술 경험을 바탕으로 현재 모양과 피부 여유도를 함께 살핍니다.",
-  },
-  {
-    number: "04",
-    icon: "method-suture.webp",
-    title: "봉합부까지 고려",
-    copy: "봉합 자리에 피부 터널이 생길 가능성을 줄이기 위한 세밀한 봉합 설계를 적용합니다.",
-  },
-  {
-    number: "05",
-    icon: "method-fascia.webp",
-    title: "표재근막 보존",
-    copy: "필요한 범위의 피부와 진피층은 정교하게 절제하고, 그 아래 표재근막층은 가능한 보존하는 방향을 우선합니다.",
-  },
-];
-
-const protocol = [
-  {
-    icon: "protocol-diagnosis.webp",
-    title: "정밀 진단",
-    copy: "발기 시 예상 길이, 피부 이동성, 소대 모양과 길이, 포피 여유도를 함께 확인합니다.",
-  },
-  {
-    icon: "protocol-design.webp",
-    title: "절제 범위 디자인",
-    copy: "개인별 유형에 맞춰 필요한 만큼의 피부 제거 범위를 설정합니다.",
-  },
-  {
-    icon: "protocol-preservation.webp",
-    title: "표재근막 보존",
-    copy: "표재근막과 그 안의 림프관·정맥망·미세혈관, 감각신경의 불필요한 손상을 줄입니다.",
-  },
-  {
-    icon: "protocol-suture.webp",
-    title: "성형외과적 미세 봉합",
-    copy: "6-0 미세 봉합사로 절개면의 높이와 간격을 세밀하게 맞춥니다.",
-  },
-  {
-    icon: "protocol-recovery.webp",
-    title: "회복 관리",
-    copy: "상태에 따라 PDRN을 포함한 재생 관리를 선택적으로 적용하고 회복 경과를 확인합니다.",
-  },
-];
-
 const faqs = [
   {
     q: "포경수술은 성인이라면 꼭 해야 하나요?",
@@ -175,7 +114,7 @@ const faqs = [
   },
   {
     q: "수술 시간과 마취 방법은 어떻게 되나요?",
-    a: "본원 안내 기준으로 국소마취 후 약 20분 내외로 진행되는 경우가 많습니다. 불안감이 큰 경우에는 상담 후 각성하 반수면을 선택적으로 고려할 수 있으며, 실제 시간과 마취 방법은 개인 상태에 따라 달라집니다.",
+    a: "본원 안내 기준으로 국소마취 후 약 20분 내외로 진행되는 경우가 많습니다. 불안감이 큰 경우에는 상담 후 의식하 진정(반수면)을 선택적으로 고려할 수 있으며, 실제 시간과 마취 방법은 개인 상태에 따라 달라집니다.",
   },
   {
     q: "수술 시 통증이 심한가요?",
@@ -183,11 +122,11 @@ const faqs = [
   },
   {
     q: "회복 기간은 얼마나 걸리나요?",
-    a: "수술 당일 가벼운 일상생활이 가능하며, 일반적으로 약 1~2주에 걸쳐 회복됩니다. 개인의 상태에 따라 차이가 있을 수 있습니다.",
+    a: "수술 당일에는 무리가 없는 범위에서 가벼운 일상생활이 가능할 수 있으며, 붓기와 불편감은 일반적으로 약 1~2주에 걸쳐 줄어듭니다. 개인의 상태와 수술 범위에 따라 차이가 있습니다.",
   },
   {
     q: "운동은 언제부터 가능한가요?",
-    a: "가벼운 산책이나 일상 활동은 당일부터 가능하며, 격렬한 운동이나 헬스는 보통 2~3주 후를 권장합니다.",
+    a: "무리가 없는 범위의 가벼운 활동은 당일부터 가능할 수 있으며, 격렬한 운동이나 헬스는 보통 2~3주 이후 경과를 확인한 뒤 재개하도록 안내합니다.",
   },
   {
     q: "소대와 표재근막을 왜 확인하나요?",
@@ -199,7 +138,7 @@ const faqs = [
   },
   {
     q: "성관계는 언제부터 가능한가요?",
-    a: "조직이 안정적으로 회복될 수 있도록 수술 후 약 4주 뒤부터를 권장하며, 정확한 시점은 경과 확인 후 안내합니다.",
+    a: "조직이 안정적으로 회복될 수 있도록 일반적으로 수술 후 약 4주 이후를 권장하며, 정확한 시점은 상처 상태를 확인한 뒤 안내합니다.",
   },
 ];
 
@@ -289,7 +228,7 @@ export default function Home() {
           <div>
             <span>ANESTHESIA</span>
             <strong>국소마취</strong>
-            <p>수술 중 통증 부담을 낮춰 편안하게 진행</p>
+            <p>국소마취로 수술 중 통증 부담을 줄이는 데 중점</p>
           </div>
           <div>
             <span>PROCEDURE</span>
@@ -299,7 +238,7 @@ export default function Home() {
           <div>
             <span>DAILY LIFE</span>
             <strong>당일 가벼운 일상</strong>
-            <p>입원 부담 없이 빠르게 일상으로 복귀</p>
+            <p>입원 없이 당일 귀가 후 가벼운 일상 가능</p>
           </div>
         </div>
       </section>
@@ -312,7 +251,7 @@ export default function Home() {
           </div>
           <div>
             <p className="eyebrow">EXPERIENCE MAKES THE DIFFERENCE</p>
-            <h2>풍부한 임상경험이 만드는 우수한 차이</h2>
+            <h2>풍부한 수술 경험에서 비롯되는 섬세한 차이</h2>
           </div>
           <div className="intro-copy">
             <p>
@@ -320,8 +259,8 @@ export default function Home() {
               누적 시술 경험을 바탕으로 안전하고 섬세한 수술을 지향합니다.
             </p>
             <p>
-              개인 맞춤형 디자인과 표재근막 보존을 중심으로 정서적·해부학적
-              만족도를 함께 고려합니다.
+              개인 맞춤형 디자인과 표재근막 보존을 중심으로 기능적 안정성과
+              심미적 균형을 함께 고려합니다.
             </p>
           </div>
         </div>
@@ -391,7 +330,7 @@ export default function Home() {
                 />
               </div>
               <h3>지속적인 위생 불편</h3>
-              <p>포피 사이의 구지와 악취로 청결 관리가 어렵거나 불편이 반복되는 경우</p>
+              <p>포피 사이의 분비물(구지)과 악취로 청결 관리가 어렵거나 불편이 반복되는 경우</p>
             </article>
           </div>
           <p className="medical-alert">
@@ -464,7 +403,7 @@ export default function Home() {
           </div>
           <aside className="decision-card">
             <div>
-              <h3>결과의 차이를 결정하는 요소</h3>
+              <h3>결과에 영향을 주는 요소</h3>
               <p>
                 네 가지 타입 중 하나를 그대로 적용하는 것이 아니라 평상시 포피의 길이,
                 발기 시 예상 길이와 둘레, 피부 탄력, 소대의 형태, 원하는 봉합선 위치를
@@ -564,13 +503,13 @@ export default function Home() {
             </div>
             <div className="anatomy-comparison-copy">
               <article>
-                <p>일반적인 포경은 피부·진피와 함께 표재근막까지 절제됩니다.</p>
+                <p>수술 방식에 따라 피부·진피와 함께 표재근막 일부가 제거될 수 있습니다.</p>
               </article>
               <article>
                 <p>해면체를 백막이 감싸고, 그 바깥을 심부근막·표재근막·피부가 차례로 둘러쌉니다.</p>
               </article>
               <article>
-                <p>표재근막 보존 포경은 피부·진피만 절제하고 표재근막은 남깁니다.</p>
+                <p>표재근막 보존 포경은 피부·진피를 중심으로 절제하고 표재근막은 가능한 범위에서 보존합니다.</p>
               </article>
             </div>
             <p className="anatomy-caveat">
@@ -584,31 +523,10 @@ export default function Home() {
       <section id="jj-method" className="section clinic-method-section">
         <div className="shell">
           <SectionHeading
-            eyebrow="THE JJ DIFFERENCE"
-            title="JJ비뇨기과는 수술의 전 과정을 봅니다"
-            description="마취 선택부터 절제, 지혈, 봉합, 조직 보존까지 각 단계가 회복과 결과에 영향을 줄 수 있어 하나의 과정으로 설계합니다."
+            eyebrow="PRESERVATION DESIGN PROTOCOL™"
+            title="디자인부터 회복까지 이어지는 5단계"
+            description="발기 시점까지 고려한 사전 디자인에서 조직층을 확인하는 절제·지혈, 표재근막 보존, 미세 봉합, 회복 관리까지 한 흐름으로 진행합니다."
           />
-          <div className="method-grid">
-            {clinicMethods.map((method) => (
-              <article key={method.title}>
-                <span>{method.number}</span>
-                <div className="method-icon">
-                  <Image
-                    src={`${ASSET_BASE}/generated-icons/${method.icon}`}
-                    alt=""
-                    fill
-                    sizes="110px"
-                  />
-                </div>
-                <h3>{method.title}</h3>
-                <p>{method.copy}</p>
-              </article>
-            ))}
-          </div>
-          <p className="method-note">
-            적용 가능한 마취 및 수술 방식은 문진과 진찰 후 의료진이 안내합니다.
-          </p>
-
           <div className="method-stories">
             <article className="method-story">
               <div
@@ -678,11 +596,11 @@ export default function Home() {
               </div>
               <div className="method-story-copy">
                 <span>STEP 02 · DISSECTION</span>
-                <h3>보이는 층을 확인하며 절제와 지혈</h3>
+                <h3>조직층을 확인하며 절제·지혈</h3>
                 <p>
                   피부 아래 구조를 확인하지 않은 채 깊이를 일률적으로 정하지 않습니다.
                   절제할 층과 보존할 층을 구분하고, 조직의 위치를 직접 확인하면서
-                  필요한 범위만 다루며 출혈 부위는 단계적으로 지혈합니다.
+                  필요한 범위만 절제하고 출혈 부위는 단계적으로 지혈합니다.
                 </p>
                 <div className="method-callout">
                   에너지 기구의 종류보다 중요한 것은 조직의 깊이와 위치를 확인하고
@@ -702,7 +620,7 @@ export default function Home() {
               </div>
               <div className="method-story-copy">
                 <span>STEP 03 · PRESERVATION</span>
-                <h3>표재근막과 소대를 가능한 보존</h3>
+                <h3>표재근막과 소대를 가능한 한 보존</h3>
                 <p>
                   표재근막에는 림프관과 정맥망, 모세혈관 및 감각신경 조직이 분포합니다.
                   필요한 피부층을 정교하게 제거하되 그 아래 표재근막의 불필요한 손상을
@@ -711,8 +629,8 @@ export default function Home() {
                 </p>
                 <ul>
                   <li>림프관·정맥망과 미세혈관 구조 존중</li>
-                  <li>감각신경에 대한 불필요한 손상 최소화 지향</li>
-                  <li>소대 형태를 살펴 자연스러운 하부 라인 고려</li>
+                  <li>감각신경의 불필요한 손상을 줄이는 방향</li>
+                  <li>소대 형태를 고려해 자연스러운 하부 라인 설계</li>
                 </ul>
               </div>
             </article>
@@ -761,42 +679,12 @@ export default function Home() {
                   고려할 수 있습니다.
                 </p>
                 <div className="method-callout caution">
-                  재생 관리는 모든 환자에게 동일하게 적용하지 않습니다. 기대 효과와
-                  적용 횟수는 수술 범위와 개인 상태에 따라 달라지며 의료진의 진찰 후
-                  결정합니다.
+                  상처 상태와 회복 경과를 확인해 필요한 경우에만 안내하며, 적용 여부와
+                  횟수는 의료진의 진찰 후 결정합니다.
                 </div>
               </div>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section id="protocol" className="section protocol-section">
-        <div className="shell">
-          <SectionHeading
-            eyebrow="PRESERVATION DESIGN PROTOCOL™"
-            title="디자인부터 회복까지 이어지는 5단계"
-            description="발기 시점까지 고려한 사전 디자인에서 조직 보존, 미세 봉합, 회복 관리까지 한 흐름으로 진행합니다."
-          />
-          <ol className="protocol-list">
-            {protocol.map((step, index) => (
-              <li key={step.title}>
-                <div className="step-number">{String(index + 1).padStart(2, "0")}</div>
-                <div className="step-icon">
-                  <Image
-                    src={`${ASSET_BASE}/generated-icons/${step.icon}`}
-                    alt=""
-                    fill
-                    sizes="110px"
-                  />
-                </div>
-                <div className="step-copy">
-                  <h3>{step.title}</h3>
-                  <p>{step.copy}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
 
@@ -847,13 +735,13 @@ export default function Home() {
             <p className="eyebrow">DIRECTOR&apos;S PHILOSOPHY</p>
             <h2>강태진 원장의 수술 철학</h2>
             <blockquote>
-              “수술의 깊이는
+              “필요한 만큼 절제하고,
               <br />
-              최대한 남기고자 하는 정성에서 나옵니다.”
+              남겨야 할 조직은 세심하게 보존합니다.”
             </blockquote>
             <p>
               좋은 포경수술은 단순히 피부를 많이 절제하는 수술이 아닙니다.
-              환자 개개인의 해부학적 조직 구조와 보존해야 할 기능을 세심하게
+              개인의 해부학적 구조와 보존해야 할 조직의 기능을 세심하게
               고려한 디자인이 중요합니다.
             </p>
             <div className="doctor-sign">
@@ -919,10 +807,10 @@ export default function Home() {
         <div className="final-cta-grid" aria-hidden="true" />
         <div className="shell final-cta-inner">
           <p className="eyebrow">PRIVATE 1:1 CONSULTATION</p>
-          <h2>나에게 꼭 맞는 보존 디자인,<br />상담에서부터 시작합니다</h2>
+          <h2>내 상태에 맞는 수술 디자인,<br />상담부터 시작합니다</h2>
           <p>
-            미세 표재근막 보존 포경수술 플랜을
-            <br className="mobile-only" /> 1:1 비밀 상담으로 확인해 보세요.
+            표재근막 보존을 고려한 맞춤 수술 계획을
+            <br className="mobile-only" /> 1:1 상담으로 확인해 보세요.
           </p>
           <div className="cta-buttons">
             <a className="button kakao" href={KAKAO_URL} target="_blank" rel="noreferrer">
@@ -933,7 +821,7 @@ export default function Home() {
               전화 상담 1599-5952
             </a>
           </div>
-          <small>사전 예약제로 운영되며 상담 내용은 철저히 보호됩니다.</small>
+          <small>사전 예약제로 운영되며 상담 내용은 개인정보 보호 원칙에 따라 관리됩니다.</small>
         </div>
       </section>
 
