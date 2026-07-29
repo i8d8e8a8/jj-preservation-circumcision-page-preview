@@ -159,7 +159,7 @@ const protocol = [
   {
     icon: "protocol-suture.webp",
     title: "성형외과적 미세 봉합",
-    copy: "6-0 나일론 미세실로 절개선의 높이와 간격을 맞춰 정교하게 봉합합니다.",
+    copy: "6-0 미세 봉합사로 절개면의 높이와 간격을 세밀하게 맞춥니다.",
   },
   {
     icon: "protocol-recovery.webp",
@@ -654,7 +654,7 @@ export default function Home() {
             <article className="method-story reverse">
               <div className="method-story-media">
                 <Image
-                  src={`${ASSET_BASE}/reference/electrosurgical-dissection.webp`}
+                  src={`${ASSET_BASE}/reference/electrosurgical-dissection-cropped.webp`}
                   alt="조직 위치를 확인하며 전기소작기로 절제와 지혈을 진행하는 단면 도식"
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"
@@ -678,7 +678,7 @@ export default function Home() {
             <article className="method-story">
               <div className="method-story-media">
                 <Image
-                  src={`${ASSET_BASE}/reference/fascia-layer-preservation.webp`}
+                  src={`${ASSET_BASE}/reference/fascia-layer-preservation-cropped.webp`}
                   alt="피부 아래 표재근막과 심부 조직의 층을 구분한 보존 수술 도식"
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"
@@ -704,17 +704,17 @@ export default function Home() {
             <article className="method-story reverse">
               <div className="method-story-media">
                 <Image
-                  src={`${ASSET_BASE}/reference/microsuture-6-0.webp`}
-                  alt="6-0 나일론 미세 봉합사와 머리카락의 두께를 비교한 이미지"
+                  src={`${ASSET_BASE}/reference/microsuture-6-0-clean.webp`}
+                  alt="6-0 미세 봉합사와 머리카락 두께 비교 이미지"
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"
                 />
               </div>
               <div className="method-story-copy">
                 <span>STEP 04 · MICRO SUTURE</span>
-                <h3>6-0 나일론으로 세밀하게 맞추는 봉합</h3>
+                <h3>6-0 미세 봉합사로 세밀하게 맞추는 봉합</h3>
                 <p>
-                  본원은 머리카락과 비슷한 수준으로 가는 6-0 나일론 미세 봉합사를
+                  본원은 머리카락과 비슷한 수준으로 가는 6-0 미세 봉합사를
                   사용합니다. 절개선 양쪽의 높이와 간격을 촘촘하게 맞춰 봉합선이
                   울퉁불퉁하거나 벌어지는 부담을 줄이고, 정돈된 라인으로 회복되도록
                   마무리합니다.
