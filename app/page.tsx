@@ -463,7 +463,6 @@ export default function Home() {
             ))}
           </div>
           <aside className="decision-card">
-            <span className="decision-number">01</span>
             <div>
               <h3>결과의 차이를 결정하는 요소</h3>
               <p>

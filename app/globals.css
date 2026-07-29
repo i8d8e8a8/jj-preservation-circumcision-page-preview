@@ -707,19 +707,10 @@ img {
 }
 
 .decision-card {
-  display: grid;
   margin-top: 30px;
-  grid-template-columns: 92px 1fr;
-  align-items: center;
   border-radius: 18px;
   background: var(--mist);
   padding: 34px 42px;
-}
-
-.decision-number {
-  color: #b6cbd6;
-  font-size: 46px;
-  font-weight: 900;
 }
 
 .decision-card h3 {
@@ -2145,13 +2136,7 @@ footer {
   }
 
   .decision-card {
-    grid-template-columns: 1fr;
     padding: 26px;
-  }
-
-  .decision-number {
-    margin-bottom: 12px;
-    font-size: 34px;
   }
 
   .preservation-intro-grid,
