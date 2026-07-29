@@ -10,7 +10,7 @@ const designs = [
     code: "L · L",
     title: "Low & Loose",
     label: "낮은 절개선 · 여유 있는 디자인",
-    image: "circum-type-low-loose-v4.webp",
+    image: "circum-type-low-loose-v5.webp",
     summary:
       "봉합선은 귀두 가까이에 두면서 피부는 여유 있게 남기는 형태입니다. 흉터가 비교적 안쪽에 자리하고 평상시에는 자연스러운 주름이 남는 것이 특징입니다.",
     details: [
@@ -35,7 +35,7 @@ const designs = [
     code: "L · T",
     title: "Low & Tight",
     label: "낮은 절개선 · 탄탄한 디자인",
-    image: "circum-type-low-tight-v3.webp",
+    image: "circum-type-low-tight-v4.webp",
     summary:
       "봉합선은 귀두 가까이에 두고 피부 주름은 적게 남기는 형태입니다. 평상시 표면이 매끈하고 정돈되어 보이는 외형을 선호할 때 고려할 수 있습니다.",
     details: [
@@ -60,7 +60,7 @@ const designs = [
     code: "H · L",
     title: "High & Loose",
     label: "높은 절개선 · 여유 있는 디자인",
-    image: "circum-type-high-loose-v3.webp",
+    image: "circum-type-high-loose-v4.webp",
     summary:
       "봉합선이 음경 몸통 중간 쪽에 위치하고 피부를 넉넉히 남기는 형태입니다. 전체적인 피부 움직임과 주름이 네 가지 유형 중 비교적 많은 편입니다.",
     details: [
@@ -85,7 +85,7 @@ const designs = [
     code: "H · T",
     title: "High & Tight",
     label: "높은 절개선 · 탄탄한 디자인",
-    image: "circum-type-high-tight-v3.webp",
+    image: "circum-type-high-tight-v4.webp",
     summary:
       "봉합선은 음경 몸통 중간 쪽에 두면서 피부 주름을 적게 남기는 형태입니다. 절개선의 위치가 비교적 높고 표면은 팽팽하게 정돈됩니다.",
     details: [
@@ -626,7 +626,17 @@ export default function Home() {
                 </div>
               </div>
               <div className="method-story-copy">
-                <span>STEP 01 · DESIGN</span>
+                <div className="method-step-label">
+                  <span className="method-step-icon">
+                    <Image
+                      src={`${ASSET_BASE}/generated-icons/protocol-design.webp`}
+                      alt=""
+                      fill
+                      sizes="48px"
+                    />
+                  </span>
+                  <span>STEP 01 · DESIGN</span>
+                </div>
                 <h3>발기 시점까지 고려한 사전 디자인</h3>
                 <p>
                   평상시 모습만 보고 절제량을 정하지 않습니다. 발기 시 예상 길이와
@@ -651,7 +661,17 @@ export default function Home() {
                 />
               </div>
               <div className="method-story-copy">
-                <span>STEP 02 · DISSECTION</span>
+                <div className="method-step-label">
+                  <span className="method-step-icon">
+                    <Image
+                      src={`${ASSET_BASE}/generated-icons/protocol-diagnosis.webp`}
+                      alt=""
+                      fill
+                      sizes="48px"
+                    />
+                  </span>
+                  <span>STEP 02 · DISSECTION</span>
+                </div>
                 <h3>조직층을 확인하며 절제·지혈</h3>
                 <p>
                   피부 아래 구조를 확인하지 않은 채 깊이를 일률적으로 정하지 않습니다.
@@ -675,7 +695,17 @@ export default function Home() {
                 />
               </div>
               <div className="method-story-copy">
-                <span>STEP 03 · PRESERVATION</span>
+                <div className="method-step-label">
+                  <span className="method-step-icon">
+                    <Image
+                      src={`${ASSET_BASE}/generated-icons/protocol-preservation.webp`}
+                      alt=""
+                      fill
+                      sizes="48px"
+                    />
+                  </span>
+                  <span>STEP 03 · PRESERVATION</span>
+                </div>
                 <h3>표재근막과 소대를 가능한 한 보존</h3>
                 <p>
                   표재근막에는 림프관과 정맥망, 모세혈관 및 감각신경 조직이 분포합니다.
@@ -701,7 +731,17 @@ export default function Home() {
                 />
               </div>
               <div className="method-story-copy">
-                <span>STEP 04 · MICRO SUTURE</span>
+                <div className="method-step-label">
+                  <span className="method-step-icon">
+                    <Image
+                      src={`${ASSET_BASE}/generated-icons/protocol-suture.webp`}
+                      alt=""
+                      fill
+                      sizes="48px"
+                    />
+                  </span>
+                  <span>STEP 04 · MICRO SUTURE</span>
+                </div>
                 <h3>6-0 미세 봉합사로 세밀하게 맞추는 봉합</h3>
                 <p>
                   본원은 머리카락과 비슷한 수준으로 가는 6-0 미세 봉합사를
@@ -726,7 +766,17 @@ export default function Home() {
                 />
               </div>
               <div className="method-story-copy">
-                <span>STEP 05 · RECOVERY CARE</span>
+                <div className="method-step-label">
+                  <span className="method-step-icon">
+                    <Image
+                      src={`${ASSET_BASE}/generated-icons/protocol-recovery.webp`}
+                      alt=""
+                      fill
+                      sizes="48px"
+                    />
+                  </span>
+                  <span>STEP 05 · RECOVERY CARE</span>
+                </div>
                 <h3>수술로 끝나지 않는 회복 관리</h3>
                 <p>
                   봉합 후에는 상처 상태를 확인하고 필요할 경우 PDRN을 포함한 재생

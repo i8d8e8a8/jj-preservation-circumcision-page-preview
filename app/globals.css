@@ -1117,11 +1117,11 @@ img {
 
 .preservation-focus-frame {
   position: absolute;
-  top: 27.5%;
-  right: 2.2%;
-  bottom: 9.5%;
+  top: 25.5%;
+  right: 1.4%;
+  bottom: 7%;
   z-index: 4;
-  width: 31.8%;
+  width: 33.2%;
   overflow: hidden;
   border: 2px solid rgba(31, 134, 184, 0);
   border-radius: 22px;
@@ -1410,6 +1410,37 @@ img {
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.14em;
+}
+
+.method-step-label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #86a9ba;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.method-step-icon {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 105, 151, 0.12);
+  border-radius: 14px;
+  background: #f7fbff;
+  box-shadow: 0 8px 18px rgba(23, 81, 116, 0.1);
+}
+
+.method-step-icon img {
+  object-fit: cover;
+}
+
+.method-story.is-visible .method-step-icon {
+  animation: methodStepIconIn 0.7s cubic-bezier(0.2, 1.35, 0.35, 1) 0.15s both;
 }
 
 .method-story-copy h3 {
@@ -3160,6 +3191,21 @@ body {
   }
 }
 
+@keyframes methodStepIconIn {
+  0% {
+    opacity: 0;
+    transform: translateY(7px) scale(0.78) rotate(-5deg);
+  }
+  72% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.07) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @keyframes anesthesiaFocus {
   0% {
     opacity: 0.45;
@@ -3313,14 +3359,25 @@ body {
   }
 
   .preservation-focus-frame {
-    right: 1%;
-    width: 33%;
+    right: 0.5%;
+    width: 34.5%;
   }
 }
 
 @media (max-width: 760px) {
   .facts-grid > div {
     min-height: 124px;
+  }
+
+  .method-step-label {
+    gap: 9px;
+  }
+
+  .method-step-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    border-radius: 12px;
   }
 
   .motion-enabled
