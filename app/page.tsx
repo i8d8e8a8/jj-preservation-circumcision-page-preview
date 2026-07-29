@@ -254,12 +254,29 @@ export default function Home() {
               표재근막 보존 중심의 섬세한 수술
             </p>
             <div className="hero-actions">
-              <a className="button primary" href={KAKAO_URL} target="_blank" rel="noreferrer">
-                <Image src={`${ASSET_BASE}/kakaotalk-icon.png`} alt="" width={24} height={24} />
-                카카오톡 1:1 상담
+              <a
+                className="hero-contact-link"
+                href={KAKAO_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="hero-contact-icon kakao">
+                  <Image
+                    src={`${ASSET_BASE}/kakaotalk-icon.png`}
+                    alt=""
+                    width={24}
+                    height={24}
+                  />
+                </span>
+                <span>카카오톡 상담</span>
               </a>
-              <a className="button secondary" href={PHONE_HREF}>
-                전화 상담 1599-5952
+              <a className="hero-contact-link" href={PHONE_HREF}>
+                <span className="hero-contact-icon phone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <path d="M7.1 3.6 9.2 7.4c.3.6.2 1.2-.3 1.7l-1.4 1.3a14.7 14.7 0 0 0 6.1 6.1l1.3-1.4c.5-.5 1.1-.6 1.7-.3l3.8 2.1c.6.3.9 1 .7 1.7l-.6 2.2c-.2.7-.8 1.2-1.6 1.2C9.6 22 2 14.4 2 5.1c0-.8.5-1.4 1.2-1.6l2.2-.6c.7-.2 1.4.1 1.7.7Z" />
+                  </svg>
+                </span>
+                <span>빠른 전화 상담</span>
               </a>
             </div>
             <p className="privacy-note">전 직원 남성 의료진 · 1:1 비밀 상담</p>
@@ -759,76 +776,9 @@ export default function Home() {
         <div className="shell">
           <SectionHeading
             eyebrow="PRESERVATION DESIGN PROTOCOL™"
-            title="보존과 디자인을 하나의 과정으로"
-            description="적정 절제량, 정밀 디자인, 핵심 조직 보존을 하나의 기준으로 연결해 진단부터 회복까지 설계합니다."
+            title="디자인부터 회복까지 이어지는 5단계"
+            description="발기 시점까지 고려한 사전 디자인에서 조직 보존, 미세 봉합, 회복 관리까지 한 흐름으로 진행합니다."
           />
-          <div className="protocol-principles">
-            <div className="protocol-principles-intro">
-              <div>
-                <span>3 CORE PRINCIPLES</span>
-                <h3>먼저, 세 가지 기준을 함께 봅니다</h3>
-              </div>
-              <p>
-                얼마나 제거할지만 따로 결정하지 않습니다. 남길 피부의 여유와
-                절제선의 위치, 보존할 조직층을 함께 살펴 하나의 수술 계획으로
-                연결합니다.
-              </p>
-            </div>
-            <div className="factor-grid">
-              <article>
-                <span>01</span>
-                <div className="factor-icon">
-                  <Image
-                    src={`${ASSET_BASE}/generated-icons/protocol-diagnosis.webp`}
-                    alt=""
-                    fill
-                    sizes="120px"
-                  />
-                </div>
-                <h3>적정 절제량</h3>
-                <p>
-                  발기 시 길이·둘레 변화와 피부 이동성을 확인해 과도한 당김을
-                  줄일 수 있도록 남길 피부 여유를 설계합니다.
-                </p>
-              </article>
-              <article>
-                <span>02</span>
-                <div className="factor-icon">
-                  <Image
-                    src={`${ASSET_BASE}/generated-icons/protocol-design.webp`}
-                    alt=""
-                    fill
-                    sizes="120px"
-                  />
-                </div>
-                <h3>정밀 디자인</h3>
-                <p>
-                  개인별 해부학적 특성과 원하는 봉합선 위치를 바탕으로 절제선과
-                  전체적인 균형을 결정합니다.
-                </p>
-              </article>
-              <article>
-                <span>03</span>
-                <div className="factor-icon">
-                  <Image
-                    src={`${ASSET_BASE}/generated-icons/protocol-preservation.webp`}
-                    alt=""
-                    fill
-                    sizes="120px"
-                  />
-                </div>
-                <h3>핵심 조직 보존</h3>
-                <p>
-                  피부·진피의 필요한 범위를 절제하되 표재근막과 소대를 가능한
-                  보존하는 방향으로 수술 계획을 세웁니다.
-                </p>
-              </article>
-            </div>
-          </div>
-          <div className="protocol-flow-heading">
-            <span>5 STEP PROCESS</span>
-            <h3>세 가지 기준을 다섯 단계에 이어갑니다</h3>
-          </div>
           <ol className="protocol-list">
             {protocol.map((step, index) => (
               <li key={step.title}>
