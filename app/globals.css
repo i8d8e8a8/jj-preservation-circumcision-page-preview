@@ -587,11 +587,25 @@ img {
 }
 
 .design-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--white);
   box-shadow: 0 16px 44px rgba(31, 67, 89, 0.05);
+}
+
+.design-card.recommended {
+  border: 2px solid rgba(31, 112, 164, 0.72);
+  background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+  box-shadow:
+    0 22px 54px rgba(25, 92, 137, 0.16),
+    0 0 0 5px rgba(55, 143, 196, 0.08);
+}
+
+.design-card.recommended .design-code {
+  border-color: rgba(31, 112, 164, 0.25);
+  color: var(--blue);
 }
 
 .design-visual {
@@ -623,6 +637,22 @@ img {
   letter-spacing: 0.12em;
 }
 
+.recommend-ribbon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #126596, #258bbf);
+  padding: 9px 14px;
+  box-shadow: 0 10px 24px rgba(16, 83, 124, 0.22);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
 .design-content {
   padding: 26px 28px 0;
 }
@@ -651,12 +681,13 @@ img {
   display: inline-flex;
   margin: 0 0 13px;
   border-radius: 999px;
-  background: #e8f3f8;
-  padding: 7px 10px;
-  color: var(--blue);
-  font-size: 9px;
+  background: #0f5e8d;
+  padding: 8px 12px;
+  box-shadow: 0 7px 18px rgba(15, 94, 141, 0.16);
+  color: #fff;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .design-details {
@@ -711,6 +742,10 @@ img {
   border-radius: 18px;
   background: var(--mist);
   padding: 34px 42px;
+}
+
+.design-card.recommended .design-note {
+  background: #e9f4fa;
 }
 
 .decision-card h3 {

@@ -9,7 +9,7 @@ const designs = [
     code: "L · L",
     title: "Low & Loose",
     label: "낮은 절개선 · 여유 있는 디자인",
-    image: "circum-type-low-loose-v3.webp",
+    image: "circum-type-low-loose-v4.webp",
     summary:
       "봉합선은 귀두 가까이에 두면서 피부는 여유 있게 남기는 형태입니다. 흉터가 비교적 안쪽에 자리하고 평상시에는 자연스러운 주름이 남는 것이 특징입니다.",
     details: [
@@ -367,7 +367,10 @@ export default function Home() {
           </div>
           <div className="design-grid">
             {designs.map((design) => (
-              <article className={`design-card ${design.tone}`} key={design.title}>
+              <article
+                className={`design-card ${design.tone} ${design.recommended ? "recommended" : ""}`}
+                key={design.title}
+              >
                 <div className="design-visual">
                   <Image
                     src={`${ASSET_BASE}/medical/${design.image}`}
@@ -377,10 +380,13 @@ export default function Home() {
                     className="design-medical-image"
                   />
                   <span className="design-code">{design.code}</span>
+                  {design.recommended ? (
+                    <span className="recommend-ribbon">JJ 추천 디자인</span>
+                  ) : null}
                 </div>
                 <div className="design-content">
                   {design.recommended ? (
-                    <span className="recommend-badge">BALANCED CHOICE</span>
+                    <span className="recommend-badge">JJ RECOMMENDED · BALANCED CHOICE</span>
                   ) : null}
                   <h3>{design.title}</h3>
                   <p className="design-label">{design.label}</p>
