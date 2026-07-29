@@ -760,8 +760,75 @@ export default function Home() {
           <SectionHeading
             eyebrow="PRESERVATION DESIGN PROTOCOL™"
             title="보존과 디자인을 하나의 과정으로"
-            description="진단부터 회복까지, 다섯 단계가 하나의 수술 결과를 만듭니다."
+            description="적정 절제량, 정밀 디자인, 핵심 조직 보존을 하나의 기준으로 연결해 진단부터 회복까지 설계합니다."
           />
+          <div className="protocol-principles">
+            <div className="protocol-principles-intro">
+              <div>
+                <span>3 CORE PRINCIPLES</span>
+                <h3>먼저, 세 가지 기준을 함께 봅니다</h3>
+              </div>
+              <p>
+                얼마나 제거할지만 따로 결정하지 않습니다. 남길 피부의 여유와
+                절제선의 위치, 보존할 조직층을 함께 살펴 하나의 수술 계획으로
+                연결합니다.
+              </p>
+            </div>
+            <div className="factor-grid">
+              <article>
+                <span>01</span>
+                <div className="factor-icon">
+                  <Image
+                    src={`${ASSET_BASE}/generated-icons/protocol-diagnosis.webp`}
+                    alt=""
+                    fill
+                    sizes="120px"
+                  />
+                </div>
+                <h3>적정 절제량</h3>
+                <p>
+                  발기 시 길이·둘레 변화와 피부 이동성을 확인해 과도한 당김을
+                  줄일 수 있도록 남길 피부 여유를 설계합니다.
+                </p>
+              </article>
+              <article>
+                <span>02</span>
+                <div className="factor-icon">
+                  <Image
+                    src={`${ASSET_BASE}/generated-icons/protocol-design.webp`}
+                    alt=""
+                    fill
+                    sizes="120px"
+                  />
+                </div>
+                <h3>정밀 디자인</h3>
+                <p>
+                  개인별 해부학적 특성과 원하는 봉합선 위치를 바탕으로 절제선과
+                  전체적인 균형을 결정합니다.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <div className="factor-icon">
+                  <Image
+                    src={`${ASSET_BASE}/generated-icons/protocol-preservation.webp`}
+                    alt=""
+                    fill
+                    sizes="120px"
+                  />
+                </div>
+                <h3>핵심 조직 보존</h3>
+                <p>
+                  피부·진피의 필요한 범위를 절제하되 표재근막과 소대를 가능한
+                  보존하는 방향으로 수술 계획을 세웁니다.
+                </p>
+              </article>
+            </div>
+          </div>
+          <div className="protocol-flow-heading">
+            <span>5 STEP PROCESS</span>
+            <h3>세 가지 기준을 다섯 단계에 이어갑니다</h3>
+          </div>
           <ol className="protocol-list">
             {protocol.map((step, index) => (
               <li key={step.title}>
@@ -781,65 +848,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="section result-section">
-        <div className="shell">
-          <SectionHeading
-            eyebrow="3 KEY FACTORS"
-            title="포경수술 결과를 결정하는 3가지"
-          />
-          <div className="factor-grid">
-            <article>
-              <span>01</span>
-              <div className="factor-icon">
-                <Image
-                  src={`${ASSET_BASE}/generated-icons/protocol-diagnosis.webp`}
-                  alt=""
-                  fill
-                  sizes="120px"
-                />
-              </div>
-              <h3>적정 절제량</h3>
-              <p>
-                과도한 피부 절제로 인한 발기 시 당김이나 통증을 예방하기 위해
-                치밀한 사전 측정을 진행합니다.
-              </p>
-            </article>
-            <article>
-              <span>02</span>
-              <div className="factor-icon">
-                <Image
-                  src={`${ASSET_BASE}/generated-icons/protocol-design.webp`}
-                  alt=""
-                  fill
-                  sizes="120px"
-                />
-              </div>
-              <h3>정밀 디자인</h3>
-              <p>
-                개인별 해부학적 특성과 곡선을 고려하여 수술 후 흉터 위치와
-                전체적인 모양을 결정합니다.
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <div className="factor-icon">
-                <Image
-                  src={`${ASSET_BASE}/generated-icons/protocol-preservation.webp`}
-                  alt=""
-                  fill
-                  sizes="120px"
-                />
-              </div>
-              <h3>핵심 조직 보존</h3>
-              <p>
-                표재근막과 신경, 미세혈관 구조를 가능한 보존하여 기능과 감각의
-                안정적인 회복을 고려합니다.
-              </p>
-            </article>
-          </div>
         </div>
       </section>
 
