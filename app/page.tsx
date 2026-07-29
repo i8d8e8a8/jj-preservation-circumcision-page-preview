@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionObserver from "./motion-observer";
 
 const KAKAO_URL = "https://pf.kakao.com/_qYlyV";
 const PHONE_HREF = "tel:1599-5952";
@@ -165,6 +166,7 @@ function SectionHeading({
 export default function Home() {
   return (
     <main>
+      <MotionObserver />
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
@@ -225,20 +227,64 @@ export default function Home() {
 
       <section className="procedure-facts" aria-label="포경수술 기본 안내">
         <div className="shell facts-grid">
-          <div>
-            <span>ANESTHESIA</span>
-            <strong>국소마취</strong>
-            <p>국소마취로 수술 중 통증 부담을 줄이는 데 중점</p>
+          <div className="fact-card fact-anesthesia">
+            <div className="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <circle className="fact-pulse pulse-one" cx="32" cy="32" r="23" />
+                <circle className="fact-pulse pulse-two" cx="32" cy="32" r="16" />
+                <g className="syringe">
+                  <path d="m22 39 17-17" />
+                  <path d="m35 18 11 11" />
+                  <path d="m39 14 11 11" />
+                  <path d="m44 19 5-5" />
+                  <path d="m18 43-4 7 7-4" />
+                  <path d="m26 35 5 5" />
+                </g>
+              </svg>
+            </div>
+            <div className="fact-copy">
+              <span>ANESTHESIA</span>
+              <strong>국소마취</strong>
+              <p>국소마취로 수술 중 통증 부담을 줄이는 데 중점</p>
+            </div>
           </div>
-          <div>
-            <span>PROCEDURE</span>
-            <strong>약 20분 내외</strong>
-            <p>디자인부터 미세 봉합까지 효율적인 수술 과정</p>
+          <div className="fact-card fact-procedure">
+            <div className="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <circle className="clock-face" cx="32" cy="34" r="20" />
+                <path className="clock-crown" d="M26 10h12M32 10v4" />
+                <path className="clock-tick" d="M32 18v3M48 34h-3M32 50v-3M16 34h3" />
+                <g className="clock-hands">
+                  <path d="M32 34V23" />
+                  <path d="m32 34 9 5" />
+                </g>
+              </svg>
+            </div>
+            <div className="fact-copy">
+              <span>PROCEDURE</span>
+              <strong>약 20분 내외</strong>
+              <p>디자인부터 미세 봉합까지 효율적인 수술 과정</p>
+            </div>
           </div>
-          <div>
-            <span>DAILY LIFE</span>
-            <strong>당일 가벼운 일상</strong>
-            <p>입원 없이 당일 귀가 후 가벼운 일상 가능</p>
+          <div className="fact-card fact-daily">
+            <div className="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path className="daily-path" d="M12 49h40" />
+                <g className="walker">
+                  <circle cx="36" cy="15" r="5" />
+                  <path d="m33 24-5 11 8 4 5-9" />
+                  <path d="m28 35-8 12" />
+                  <path d="m36 39 10 10" />
+                  <path d="m31 26-10 6" />
+                </g>
+                <path className="daily-arrow" d="m45 23 7 5-7 5" />
+              </svg>
+            </div>
+            <div className="fact-copy">
+              <span>DAILY LIFE</span>
+              <strong>당일 가벼운 일상</strong>
+              <p>입원 없이 당일 귀가 후 가벼운 일상 가능</p>
+            </div>
           </div>
         </div>
       </section>
@@ -370,6 +416,7 @@ export default function Home() {
               <article
                 className={`design-card ${design.tone} ${design.recommended ? "recommended" : ""}`}
                 key={design.title}
+                data-spotlight={design.recommended ? "recommended" : undefined}
               >
                 <div className="design-visual">
                   <Image
@@ -481,6 +528,13 @@ export default function Home() {
                 sizes="(max-width: 760px) 100vw, 1160px"
                 className="fascia-medical-image"
               />
+              <div
+                className="preservation-focus-frame"
+                data-spotlight="preservation"
+                aria-hidden="true"
+              >
+                <span>표재근막 보존 포경</span>
+              </div>
               <div className="anatomy-image-titles" aria-hidden="true">
                 <div>
                   <span>01</span>
