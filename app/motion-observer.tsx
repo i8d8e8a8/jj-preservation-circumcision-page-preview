@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 const revealSelectors = [
   ".facts-grid > div",
-  ".intro-grid > *",
+  ".intro-heading",
+  ".experience-stat",
+  ".intro-copy",
   ".section-heading",
   ".indication-grid article",
   ".design-basics > div",
@@ -20,7 +22,18 @@ const revealSelectors = [
 
 export default function MotionObserver() {
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const countTargets = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-count-to]"),
+    );
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      countTargets.forEach((target) => {
+        const countTo = Number(target.dataset.countTo ?? 0);
+        target.textContent = countTo.toLocaleString("ko-KR");
+      });
       return;
     }
 
@@ -31,6 +44,8 @@ export default function MotionObserver() {
     const spotlightTargets = Array.from(
       document.querySelectorAll<HTMLElement>("[data-spotlight]"),
     );
+    const countFrames = new Map<HTMLElement, number>();
+    const countTimers = new Map<HTMLElement, number>();
 
     root.classList.add("motion-enabled");
     revealTargets.forEach((target, index) => {
@@ -72,12 +87,69 @@ export default function MotionObserver() {
       },
     );
 
+    const stopCount = (target: HTMLElement) => {
+      const frame = countFrames.get(target);
+      const timer = countTimers.get(target);
+      if (frame !== undefined) window.cancelAnimationFrame(frame);
+      if (timer !== undefined) window.clearTimeout(timer);
+      countFrames.delete(target);
+      countTimers.delete(target);
+    };
+
+    const startCount = (target: HTMLElement) => {
+      stopCount(target);
+      const countTo = Number(target.dataset.countTo ?? 0);
+      const delay = Number(target.dataset.countDelay ?? 0);
+      const duration = countTo >= 1000 ? 1450 : 1150;
+
+      target.textContent = "0";
+      const timer = window.setTimeout(() => {
+        const startedAt = window.performance.now();
+        const tick = (now: number) => {
+          const progress = Math.min(1, (now - startedAt) / duration);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(countTo * eased);
+          target.textContent = value.toLocaleString("ko-KR");
+
+          if (progress < 1) {
+            countFrames.set(target, window.requestAnimationFrame(tick));
+          } else {
+            countFrames.delete(target);
+          }
+        };
+
+        countFrames.set(target, window.requestAnimationFrame(tick));
+      }, delay);
+      countTimers.set(target, timer);
+    };
+
+    const countObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLElement;
+          if (entry.isIntersecting) {
+            startCount(target);
+          } else {
+            stopCount(target);
+            target.textContent = "0";
+          }
+        });
+      },
+      {
+        rootMargin: "-8% 0px -12% 0px",
+        threshold: 0.45,
+      },
+    );
+
     revealTargets.forEach((target) => revealObserver.observe(target));
     spotlightTargets.forEach((target) => spotlightObserver.observe(target));
+    countTargets.forEach((target) => countObserver.observe(target));
 
     return () => {
       revealObserver.disconnect();
       spotlightObserver.disconnect();
+      countObserver.disconnect();
+      countTargets.forEach(stopCount);
       root.classList.remove("motion-enabled");
     };
   }, []);

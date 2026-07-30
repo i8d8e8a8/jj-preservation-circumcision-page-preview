@@ -287,18 +287,40 @@ export default function Home() {
 
       <section className="intro section">
         <div className="shell intro-grid">
-          <div className="intro-mark" aria-hidden="true">
-            <span>20</span>
-            <small>YEARS</small>
-          </div>
-          <div>
+          <div className="intro-heading">
             <p className="eyebrow">EXPERIENCE MAKES THE DIFFERENCE</p>
             <h2>풍부한 수술 경험에서 비롯되는 섬세한 차이</h2>
+          </div>
+          <div className="experience-stats" aria-label="수술 경험 주요 수치">
+            <article className="experience-stat">
+              <strong>
+                <span data-count-to="20" data-count-delay="0">0</span>
+                <em>+</em>
+              </strong>
+              <b>20년 이상</b>
+              <p>비뇨의학과 수술 경험</p>
+            </article>
+            <article className="experience-stat">
+              <strong>
+                <span data-count-to="10000" data-count-delay="120">0</span>
+                <em>+</em>
+              </strong>
+              <b>10,000건 이상</b>
+              <p>누적 수술 경험</p>
+            </article>
+            <article className="experience-stat">
+              <strong>
+                <span data-count-to="98" data-count-delay="240">0</span>
+                <em>%+</em>
+              </strong>
+              <b>98% 이상</b>
+              <p>환자 만족도</p>
+            </article>
           </div>
           <div className="intro-copy">
             <p>
               20년 이상 쌓아온 비뇨의학과 수술 노하우와 10,000건 이상의
-              누적 시술 경험을 바탕으로 안전하고 섬세한 수술을 지향합니다.
+              누적 수술 경험을 바탕으로 안전하고 섬세한 수술을 지향합니다.
             </p>
             <p>
               개인 맞춤형 디자인과 표재근막 보존을 중심으로 기능적 안정성과
