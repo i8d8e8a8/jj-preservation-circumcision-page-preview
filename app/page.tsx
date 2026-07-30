@@ -149,14 +149,14 @@ function SectionHeading({
   description,
   inverse = false,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: React.ReactNode;
   description?: string;
   inverse?: boolean;
 }) {
   return (
     <div className={`section-heading ${inverse ? "inverse" : ""}`}>
-      <p className="eyebrow">{eyebrow}</p>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2>{title}</h2>
       {description ? <p className="section-description">{description}</p> : null}
     </div>
@@ -186,7 +186,6 @@ export default function Home() {
             </p>
             <h1>
               포경수술은
-              <span>얼마나 제거하느냐보다</span>
               <strong>무엇을 남기느냐가 중요합니다.</strong>
             </h1>
             <p className="hero-lead">
@@ -333,7 +332,6 @@ export default function Home() {
       <section id="indications" className="section indication-section">
         <div className="shell">
           <SectionHeading
-            eyebrow="DO I NEED CIRCUMCISION?"
             title={
               <>
                 포경수술,
@@ -515,7 +513,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span>02</span>
-                  <p>청록색 표재근막층을 보존하는 방향으로 접근</p>
+                  <p>표재근막층을 보존하는 방향으로 접근</p>
                 </div>
                 <div>
                   <span>03</span>
@@ -700,10 +698,6 @@ export default function Home() {
                   절제할 층과 보존할 층을 구분하고, 조직의 위치를 직접 확인하면서
                   필요한 범위만 절제하고 출혈 부위는 단계적으로 지혈합니다.
                 </p>
-                <div className="method-callout">
-                  에너지 기구의 종류보다 중요한 것은 조직의 깊이와 위치를 확인하고
-                  주변 구조에 불필요한 열 손상을 주지 않도록 사용하는 과정입니다.
-                </div>
               </div>
             </article>
 
