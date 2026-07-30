@@ -971,6 +971,23 @@ img {
   background: #e9f4fa;
 }
 
+.design-card.recommended .design-note strong {
+  color: #0f5e8d;
+}
+
+.design-card:not(.recommended) .design-note {
+  border-top: 1px solid #f1d5cd;
+  background: #fff3ef;
+}
+
+.design-card:not(.recommended) .design-note strong {
+  color: #b64f3f;
+}
+
+.design-card:not(.recommended) .design-note p {
+  color: #6f554f;
+}
+
 .decision-card h3 {
   margin: 0 0 10px;
   color: var(--navy);
