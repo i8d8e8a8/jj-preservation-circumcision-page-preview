@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   assetPrefix: pagesBasePath || undefined,
   trailingSlash: isGitHubPages,
   images: {
-    unoptimized: isGitHubPages,
+    unoptimized: true,
   },
   typescript: {
     // The static review build does not include the Cloudflare-only db/worker modules.

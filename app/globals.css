@@ -1543,6 +1543,119 @@ img {
   color: #6c5a41;
 }
 
+.recovery-story {
+  display: block;
+  padding: 48px;
+  background:
+    linear-gradient(145deg, rgba(237, 247, 255, 0.9), rgba(255, 255, 255, 0) 42%),
+    #fff;
+}
+
+.pdrn-intro {
+  max-width: 860px;
+}
+
+.pdrn-injection-badge {
+  display: inline-flex;
+  margin-top: 26px;
+  border: 1px solid rgba(28, 112, 170, 0.18);
+  border-radius: 999px;
+  background: #e9f5fc;
+  padding: 8px 13px;
+  color: #176b9e;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.pdrn-intro h3 {
+  margin: 14px 0 18px;
+  color: var(--navy);
+  font-size: clamp(28px, 3.2vw, 42px);
+  letter-spacing: -0.045em;
+  line-height: 1.3;
+}
+
+.pdrn-intro > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.pdrn-injection-note {
+  display: grid;
+  margin-top: 25px;
+  border-left: 4px solid #277fb5;
+  border-radius: 0 14px 14px 0;
+  background: #edf6fb;
+  gap: 7px;
+  padding: 19px 22px;
+}
+
+.pdrn-injection-note strong {
+  color: #164f73;
+  font-size: 15px;
+}
+
+.pdrn-injection-note p {
+  margin: 0;
+  color: #56707e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.pdrn-effect-grid {
+  display: grid;
+  margin-top: 38px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pdrn-effect-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d6e5ed;
+  border-radius: 18px;
+  background: #fff;
+  padding: 12px 12px 19px;
+  box-shadow: 0 12px 30px rgba(28, 82, 115, 0.07);
+}
+
+.pdrn-effect-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 13px;
+  background: #eef7fd;
+}
+
+.pdrn-effect-image img {
+  object-fit: cover;
+}
+
+.pdrn-effect-card h4 {
+  margin: 16px 5px 7px;
+  color: var(--navy);
+  font-size: 17px;
+  letter-spacing: -0.035em;
+}
+
+.pdrn-effect-card p {
+  margin: 0 5px;
+  color: #5a7280;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.pdrn-caveat {
+  margin: 22px 0 0;
+  color: #8297a2;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
 .protocol-section {
   background: var(--mist);
 }
@@ -1725,12 +1838,12 @@ img {
   min-height: 620px;
   overflow: hidden;
   border-radius: 24px;
-  background: #071725;
+  background: #f5f7f9;
 }
 
 .doctor-photo img {
   object-fit: cover;
-  object-position: center;
+  object-position: 58% center;
 }
 
 .doctor-photo::after {
@@ -2187,7 +2300,6 @@ footer {
   }
 }
 
-.mobile-bar,
 .mobile-only {
   display: none;
 }
@@ -2286,10 +2398,6 @@ footer {
 @media (max-width: 760px) {
   html {
     scroll-padding-top: 62px;
-  }
-
-  body {
-    padding-bottom: 66px;
   }
 
   .shell {
@@ -2578,6 +2686,48 @@ footer {
     padding: 30px 24px 34px;
   }
 
+  .recovery-story {
+    padding: 30px 20px;
+  }
+
+  .pdrn-intro h3 {
+    font-size: 27px;
+  }
+
+  .pdrn-intro > p {
+    font-size: 14px;
+  }
+
+  .pdrn-effect-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pdrn-effect-card {
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 15px;
+    padding: 10px 14px 10px 10px;
+  }
+
+  .pdrn-effect-image {
+    grid-row: 1 / 3;
+  }
+
+  .pdrn-effect-card h4 {
+    align-self: end;
+    margin: 0 0 5px;
+    font-size: 17px;
+  }
+
+  .pdrn-effect-card p {
+    align-self: start;
+    margin: 0;
+    font-size: 12px;
+  }
+
   .method-story-copy h3 {
     font-size: 23px;
   }
@@ -2760,33 +2910,6 @@ footer {
 
   .footer-inner img {
     margin-inline: auto;
-  }
-
-  .mobile-bar {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 40;
-    display: grid;
-    height: 66px;
-    grid-template-columns: 1fr 1.25fr;
-    box-shadow: 0 -8px 24px rgba(7, 35, 53, 0.14);
-  }
-
-  .mobile-bar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--white);
-    color: var(--navy);
-    font-size: 14px;
-    font-weight: 800;
-  }
-
-  .mobile-bar a:last-child {
-    background: #fee500;
-    color: #191919;
   }
 
   .mobile-only {

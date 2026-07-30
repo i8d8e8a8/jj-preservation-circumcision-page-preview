@@ -16,7 +16,7 @@ const designs = [
     details: [
       {
         label: "절개선 위치",
-        value: "흉터가 귀두 가까이에 위치해 음경 몸통 중앙의 절개선보다 비교적 덜 도드라집니다.",
+        value: "흉터가 귀두 가까이에 위치해 몸 쪽에 가까운 절개선보다 비교적 덜 도드라집니다.",
       },
       {
         label: "피부 여유",
@@ -64,11 +64,11 @@ const designs = [
     label: "높은 절개선 · 여유 있는 디자인",
     image: "circum-type-high-loose-v4.webp",
     summary:
-      "봉합선이 음경 몸통 중간에 가깝고 피부를 넉넉히 남기는 형태입니다. 피부 움직임과 주름이 많아 포경수술 후에도 귀두가 일부 다시 덮일 수 있습니다.",
+      "봉합선이 몸 쪽에 가깝고 피부를 넉넉히 남기는 형태입니다. 피부 움직임과 주름이 많아 포경수술 후에도 귀두가 일부 다시 덮일 수 있습니다.",
     details: [
       {
         label: "절개선 위치",
-        value: "흉터가 귀두에서 떨어진 음경 중간 부위에 형성되어 외부에서 비교적 눈에 띌 수 있습니다.",
+        value: "흉터가 귀두보다 몸 쪽에 가깝게 형성되어 외부에서 비교적 눈에 띌 수 있습니다.",
       },
       {
         label: "피부 여유",
@@ -80,7 +80,7 @@ const designs = [
       },
     ],
     noteTitle: "우선 확인해야 할 단점",
-    note: "포경수술 후에도 귀두가 다시 덮여 수술 효과가 부족하게 느껴질 수 있고, 몸통 중간의 봉합선도 상대적으로 잘 보일 수 있습니다.",
+    note: "포경수술 후에도 귀두가 다시 덮여 수술 효과가 부족하게 느껴질 수 있고, 몸 쪽에 가까운 봉합선도 상대적으로 잘 보일 수 있습니다.",
     tone: "loose",
     recommended: false,
   },
@@ -90,11 +90,11 @@ const designs = [
     label: "높은 절개선 · 여유가 적은 디자인",
     image: "circum-type-high-tight-v4.webp",
     summary:
-      "봉합선이 음경 몸통 중간에 가깝고 피부 주름과 여유를 적게 남기는 형태입니다. 절개선이 비교적 잘 보이면서 발기 시 당김 가능성도 함께 고려해야 합니다.",
+      "봉합선이 몸 쪽에 가깝고 피부 주름과 여유를 적게 남기는 형태입니다. 절개선이 비교적 잘 보이면서 발기 시 당김 가능성도 함께 고려해야 합니다.",
     details: [
       {
         label: "절개선 위치",
-        value: "봉합선이 귀두에서 떨어져 음경 중간에 가까우며 외부에서 위치가 비교적 잘 보일 수 있습니다.",
+        value: "봉합선이 귀두보다 몸 쪽에 가깝고 외부에서 위치가 비교적 잘 보일 수 있습니다.",
       },
       {
         label: "피부 여유",
@@ -109,6 +109,34 @@ const designs = [
     note: "높은 절개선과 적은 피부 여유가 결합된 유형으로, 흉터 노출과 발기 시 당김을 모두 세심하게 검토해야 합니다.",
     tone: "high",
     recommended: false,
+  },
+];
+
+const pdrnEffects = [
+  {
+    title: "빠른 회복",
+    description: "손상 조직의 재생 과정과 상처가 아물어 가는 회복 환경을 보조합니다.",
+    image: "pdrn-fast-recovery-v1.png",
+  },
+  {
+    title: "통증 부담 감소",
+    description: "회복 과정의 통증과 불편감이 완화되는 데 도움을 줄 수 있습니다.",
+    image: "pdrn-pain-support-v1.png",
+  },
+  {
+    title: "부종 감소",
+    description: "수술 후 붓기가 가라앉고 일상으로 회복하는 과정을 보조합니다.",
+    image: "pdrn-swelling-support-v1.png",
+  },
+  {
+    title: "염증 반응 완화",
+    description: "과도한 염증 반응을 줄이고 조직이 안정되는 과정을 돕습니다.",
+    image: "pdrn-inflammation-support-v1.png",
+  },
+  {
+    title: "흉터 회복 보조",
+    description: "절개선이 안정적으로 아물고 흉터가 성숙하는 과정을 보조합니다.",
+    image: "pdrn-scar-support-v1.png",
   },
 ];
 
@@ -343,7 +371,7 @@ export default function Home() {
                 모두에게 필요한 것은 아닙니다
               </>
             }
-            description="성인이 되어 자연스럽게 포피가 젖혀지고 위생 관리와 성생활에 불편이 없다면 일률적으로 수술할 필요는 없습니다. 다만 아래 증상이 있다면 정확한 진단을 권합니다."
+            description="아래 증상이 있다면 정확한 진단을 권합니다."
           />
           <div className="indication-grid">
             <article>
@@ -423,7 +451,7 @@ export default function Home() {
             <div>
               <span>POSITION</span>
               <strong>LOW ↔ HIGH</strong>
-              <p>봉합선이 귀두에 가까운지, 음경 몸통 쪽에 가까운지를 구분합니다.</p>
+              <p>봉합선이 귀두 쪽에 가까운지, 몸 쪽에 가까운지를 구분합니다.</p>
             </div>
             <div>
               <span>SKIN MARGIN</span>
@@ -776,16 +804,8 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="method-story">
-              <div className="method-story-media">
-                <Image
-                  src={`${ASSET_BASE}/reference/pdrn-recovery-effects.webp`}
-                  alt="포경수술 후 PDRN 재생 관리의 목적을 설명하는 참고 인포그래픽"
-                  fill
-                  sizes="(max-width: 760px) 100vw, 50vw"
-                />
-              </div>
-              <div className="method-story-copy">
+            <article className="method-story recovery-story">
+              <div className="pdrn-intro">
                 <div className="method-step-label">
                   <span className="method-step-icon">
                     <Image
@@ -797,18 +817,42 @@ export default function Home() {
                   </span>
                   <span>STEP 05 · RECOVERY CARE</span>
                 </div>
-                <h3>수술로 끝나지 않는 회복 관리</h3>
+                <span className="pdrn-injection-badge">POSTOPERATIVE PDRN INJECTION</span>
+                <h3>수술 후 회복을 돕는 PDRN 재생 주사</h3>
                 <p>
-                  봉합 후에는 상처 상태를 확인하고 필요할 경우 PDRN을 포함한 재생
-                  관리를 선택적으로 안내합니다. PDRN은 조직 회복과 관련해 연구되고
-                  있는 물질로, 수술 후 관리에서는 상처 회복을 보조하는 목적으로
-                  고려할 수 있습니다.
+                  PDRN(Polydeoxyribonucleotide)은 정제된 DNA 조각으로 구성된
+                  재생치료 성분입니다. 손상 조직이 회복되는 데 필요한 환경을 만들도록
+                  돕고, 미세혈류·새 혈관 형성·염증 반응 조절과 관련된 회복 작용이
+                  연구되고 있습니다.
                 </p>
-                <div className="method-callout caution">
-                  상처 상태와 회복 경과를 확인해 필요한 경우에만 안내하며, 적용 여부와
-                  횟수는 의료진의 진찰 후 결정합니다.
+                <div className="pdrn-injection-note">
+                  <strong>봉합 부위 상태를 확인한 뒤 필요한 부위에 주사로 적용합니다.</strong>
+                  <p>
+                    적용 시점과 횟수는 수술 범위, 상처 상태, 알레르기 및 기저질환을
+                    확인한 뒤 의료진이 개별적으로 결정합니다.
+                  </p>
                 </div>
               </div>
+              <div className="pdrn-effect-grid" aria-label="PDRN 재생 주사의 회복 보조 목적">
+                {pdrnEffects.map((effect) => (
+                  <article className="pdrn-effect-card" key={effect.title}>
+                    <div className="pdrn-effect-image">
+                      <Image
+                        src={`${ASSET_BASE}/generated-icons/${effect.image}`}
+                        alt={`${effect.title} 안내 의료 아이콘`}
+                        fill
+                        sizes="(max-width: 760px) 44vw, 190px"
+                      />
+                    </div>
+                    <h4>{effect.title}</h4>
+                    <p>{effect.description}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="pdrn-caveat">
+                PDRN 주사는 수술 후 회복을 보조하는 선택적 관리이며, 효과와 회복
+                속도에는 개인차가 있습니다.
+              </p>
             </article>
           </div>
         </div>
@@ -850,8 +894,8 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-philosophy-original-v10.png`}
-              alt="어두운 수술실에서 전기 소작기 핸드피스로 정밀 수술을 진행하는 강태진 대표원장"
+              src={`${ASSET_BASE}/doctor-philosophy-surgery-v11.png`}
+              alt="수술 확대경을 착용하고 정밀 수술을 진행하는 강태진 대표원장"
               fill
               sizes="(max-width: 760px) 100vw, 44vw"
             />
@@ -951,10 +995,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mobile-bar" aria-label="빠른 상담">
-        <a href={PHONE_HREF}>전화 상담</a>
-        <a href={KAKAO_URL} target="_blank" rel="noreferrer">카카오톡 상담</a>
-      </div>
     </main>
   );
 }

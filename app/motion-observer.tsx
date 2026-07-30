@@ -14,6 +14,7 @@ const revealSelectors = [
   ".preservation-intro-grid > *",
   ".anatomy-card",
   ".method-story",
+  ".pdrn-effect-card",
   ".candidate-grid > *",
   ".doctor-grid > *",
   ".faq-list details",
