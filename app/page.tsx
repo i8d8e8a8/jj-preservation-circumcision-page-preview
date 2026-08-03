@@ -133,7 +133,7 @@ const pdrnEffects = [
   {
     title: "통증 부담 감소",
     description: "회복 과정의 통증과 불편감이 완화되는 데 도움을 줄 수 있습니다.",
-    image: "pdrn-pain-support-v1.png",
+    image: "pdrn-pain-support-v2.png",
   },
   {
     title: "부종 감소",
