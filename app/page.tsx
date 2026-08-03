@@ -938,7 +938,7 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-philosophy-surgery-v13-bw.png`}
+              src={`${ASSET_BASE}/doctor-philosophy-surgery-v15-karsh.png`}
               alt="수술 확대경을 착용하고 정밀 수술을 진행하는 강태진 대표원장"
               fill
               sizes="(max-width: 760px) 100vw, 44vw"
