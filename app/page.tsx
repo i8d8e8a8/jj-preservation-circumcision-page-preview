@@ -202,7 +202,7 @@ export default function Home() {
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">
           <Image
-            src={`${ASSET_BASE}/hero-circumcision-preservation-v14.webp`}
+            src={`${ASSET_BASE}/hero-circumcision-dark-navy-v15.png`}
             alt=""
             fill
             priority
