@@ -5,18 +5,6 @@ const KAKAO_URL = "https://pf.kakao.com/_qYlyV";
 const PHONE_HREF = "tel:1599-5952";
 const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-const modoodocGuides = [
-  { file: "01-cover.png", alt: "무엇을 남길지까지 디자인하는 JJ비뇨기과 포경수술 안내" },
-  { file: "02-indications.png", alt: "포경수술이 필요한 대표적인 증상과 불편 안내" },
-  { file: "03-design-types.png", alt: "절개선 위치와 피부 여유에 따른 네 가지 포경수술 디자인" },
-  { file: "04-anesthesia.png", alt: "통증 부담을 낮추는 단계별 마취 방법" },
-  { file: "05-fascia-preservation.png", alt: "피부와 표재근막을 구분하는 보존 수술 안내" },
-  { file: "06-procedure.png", alt: "사전 디자인부터 미세 봉합까지 포경수술 다섯 단계" },
-  { file: "07-recovery.png", alt: "포경수술 후 생활 복귀와 회복 관리 안내" },
-  { file: "08-doctor.png", alt: "강태진 대표원장의 포경수술 철학" },
-  { file: "09-contact.png", alt: "JJ비뇨기과 위치와 상담 연락처" },
-];
-
 const designs = [
   {
     code: "L · L",
@@ -324,38 +312,6 @@ export default function Home() {
               <strong>당일 가벼운 일상</strong>
               <p>입원 없이 당일 귀가 후 가벼운 일상 가능</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section modoodoc-guide-section" aria-labelledby="modoodoc-guide-title">
-        <div className="shell">
-          <div className="modoodoc-guide-head">
-            <div>
-              <p className="eyebrow">CIRCUMCISION GUIDE</p>
-              <h2 id="modoodoc-guide-title">한 장씩 이해하는<br />포경수술 핵심 가이드</h2>
-            </div>
-            <p>
-              모두닥에서 보는 핵심 안내를 랜딩페이지에서도 같은 디자인과
-              정보 흐름으로 확인할 수 있도록 정리했습니다.
-            </p>
-          </div>
-          <div className="modoodoc-guide-rail" aria-label="포경수술 핵심 안내 카드">
-            {modoodocGuides.map((guide, index) => (
-              <article className="modoodoc-guide-card" key={guide.file}>
-                <Image
-                  src={`${ASSET_BASE}/modoodoc/${guide.file}`}
-                  alt={guide.alt}
-                  fill
-                  sizes="(max-width: 760px) 82vw, 360px"
-                  priority={index === 0}
-                />
-              </article>
-            ))}
-          </div>
-          <div className="modoodoc-guide-foot">
-            <span>좌우로 넘겨 핵심 내용을 확인하세요</span>
-            <a href="#consult">내 상태에 맞는 디자인 상담하기 <b>→</b></a>
           </div>
         </div>
       </section>
@@ -938,7 +894,7 @@ export default function Home() {
         <div className="shell doctor-grid">
           <div className="doctor-photo">
             <Image
-              src={`${ASSET_BASE}/doctor-philosophy-surgery-v15-karsh.png`}
+              src={`${ASSET_BASE}/doctor-philosophy-surgery-v16-rimlight.png`}
               alt="수술 확대경을 착용하고 정밀 수술을 진행하는 강태진 대표원장"
               fill
               sizes="(max-width: 760px) 100vw, 44vw"
