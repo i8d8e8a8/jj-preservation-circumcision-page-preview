@@ -1,98 +1,36 @@
-# vinext-starter
+# JJ비뇨기과 표재근막 보존 포경수술 랜딩페이지
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+JJ비뇨기과의 포경수술 안내 페이지를 위한 Next.js 기반 랜딩페이지입니다. 개인별 디자인, 표재근막 보존, 미세 봉합, PDRN 재생치료와 회복 안내를 중심으로 구성되어 있습니다.
 
-## Prerequisites
+## 확인 주소
 
-- Node.js `>=22.13.0`
+- 검수 페이지: https://i8d8e8a8.github.io/jj-preservation-circumcision-preview/
+- 실제 적용 주소: https://jj-man.co.kr/child/sub/surgery2/2.php
 
-## Quick Start
+## 주요 명령
 
-```bash
-npm install
-npm run dev
-npm run build
+```powershell
+pnpm install
+pnpm run dev
+pnpm run build:pages
 ```
 
-This starter does not use `wrangler.jsonc`.
+실제 홈페이지용 정적 파일을 만들 때는 다음 경로를 사용합니다.
 
-## Included Shape
-
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```powershell
+$env:STATIC_BASE_PATH='/child/sub/surgery2/circumcision-assets'
+pnpm run build:pages
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## 백업 범위
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+- 페이지 소스와 공개 이미지 자산
+- GitHub Pages 검수 배포 설정
+- 실제 홈페이지 정적 배포를 위한 `STATIC_BASE_PATH` 설정
+- 최종 FileZilla 운영 적용 ZIP
+- 최신 외부 플랫폼 전달용 ZIP
+- 진행 기록과 복구 안내
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+임시 렌더, 중간 생성 이미지, 폐기된 배포 패키지와 다른 랜딩페이지 작업물은 저장소 크기와 혼선을 줄이기 위해 제외합니다.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+자세한 현황은 [현재 진행상황 문서](docs/현재_진행상황_2026-08-03.md)를 참고하세요.

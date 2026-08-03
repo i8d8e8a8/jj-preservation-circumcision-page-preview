@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
+const staticBasePath = process.env.STATIC_BASE_PATH?.trim();
+const isStaticExport = isGitHubPages || Boolean(staticBasePath);
 const repositoryName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ??
   "jj-preservation-circumcision";
-const pagesBasePath = isGitHubPages ? `/${repositoryName}` : "";
+const pagesBasePath = staticBasePath ?? (isGitHubPages ? `/${repositoryName}` : "");
 
 const nextConfig: NextConfig = {
-  output: isGitHubPages ? "export" : undefined,
+  output: isStaticExport ? "export" : undefined,
   basePath: pagesBasePath,
   assetPrefix: pagesBasePath || undefined,
   trailingSlash: isGitHubPages,
@@ -16,7 +18,7 @@ const nextConfig: NextConfig = {
   },
   typescript: {
     // The static review build does not include the Cloudflare-only db/worker modules.
-    ignoreBuildErrors: isGitHubPages,
+    ignoreBuildErrors: isStaticExport,
   },
   env: {
     NEXT_PUBLIC_BASE_PATH: pagesBasePath,

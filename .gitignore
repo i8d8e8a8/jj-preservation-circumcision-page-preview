@@ -41,3 +41,20 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Local generation and review artifacts
+/output/
+/tmp/
+/build_full_event_page.py
+/build_premium_event_page_v4.py
+/build_revision_case_740x620.mjs
+/build_section_generated_event_v5.py
+/build_section_generated_event_v6.py
+/prepare_revision_case_upload.py
+/public/doctor-philosophy-real-v17-precision.png
+
+# Keep only the final handoff archives in Git backup
+/filezilla-upload/*
+!/filezilla-upload/JJ포경수술_2php_운영적용_20260803-v1.zip
+/deliverables/*
+!/deliverables/모두닥_업로드용_v3.zip
