@@ -10,6 +10,7 @@
   --muted: #667884;
   --line: #dce5ea;
   --white: #ffffff;
+  --motion-blue: #034f9f;
 }
 
 * {
@@ -470,7 +471,7 @@ img {
 
 .anesthesia-plus {
   opacity: 0;
-  stroke: #168fd2;
+  stroke: var(--motion-blue);
   transform-box: fill-box;
   transform-origin: center;
 }
@@ -480,7 +481,7 @@ img {
 }
 
 .clock-range {
-  stroke: #168fd2;
+  stroke: var(--motion-blue);
   stroke-width: 5;
   stroke-dasharray: 64;
   stroke-dashoffset: 64;
@@ -508,7 +509,7 @@ img {
 
 .daily-check {
   opacity: 0;
-  stroke: #168fd2;
+  stroke: var(--motion-blue);
   stroke-width: 3.2;
   stroke-dasharray: 24;
   stroke-dashoffset: 24;
@@ -602,10 +603,16 @@ img {
 
 .experience-stat strong em {
   margin: 2px 0 0 4px;
-  color: #5267c9;
+  color: var(--motion-blue);
   font-size: 0.43em;
   font-style: normal;
   letter-spacing: -0.02em;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.experience-stat.is-visible strong em {
+  animation: anesthesiaPlusPop 0.62s cubic-bezier(0.2, 1.45, 0.35, 1) 0.55s both;
 }
 
 .experience-stat b {
