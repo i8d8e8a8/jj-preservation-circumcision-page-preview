@@ -197,7 +197,7 @@ function SectionHeading({
 
 export default function Home() {
   return (
-    <main>
+    <main className="jj-circumcision-page" data-page-type="hospital-subpage-content">
       <MotionObserver />
       <section id="top" className="hero">
         <div className="hero-photo" aria-hidden="true">

@@ -5,7 +5,7 @@ import "./globals.css";
 const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const SITE_URL =
   process.env.GITHUB_ACTIONS === "true"
-    ? "https://jjzipza.github.io/jj-preservation-circumcision/"
+    ? "https://i8d8e8a8.github.io/jj-preservation-circumcision-page-preview/"
     : "https://jj-preservation-circumcision.i8d8e8a8.chatgpt.site/";
 
 const notoSansKR = Noto_Sans_KR({
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "JJ비뇨기과 포경수술 | 표재근막 보존 맞춤 디자인",
   description:
     "강태진 원장의 표재근막 보존 중심 맞춤형 성인 포경수술. 개인별 해부학적 특징에 맞춘 정밀 디자인과 회복 관리.",
-  applicationName: "JJ비뇨기과 포경수술",
+  applicationName: "JJ비뇨기과 포경수술 안내 페이지",
   icons: {
     icon: `${ASSET_BASE}/brand/jj-square.png`,
     apple: `${ASSET_BASE}/brand/jj-square.png`,

@@ -5,7 +5,7 @@ const staticBasePath = process.env.STATIC_BASE_PATH?.trim();
 const isStaticExport = isGitHubPages || Boolean(staticBasePath);
 const repositoryName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ??
-  "jj-preservation-circumcision";
+  "jj-preservation-circumcision-page-preview";
 const pagesBasePath = staticBasePath ?? (isGitHubPages ? `/${repositoryName}` : "");
 
 const nextConfig: NextConfig = {
