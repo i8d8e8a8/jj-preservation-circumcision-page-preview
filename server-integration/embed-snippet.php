@@ -42,6 +42,11 @@
         childList: true,
         subtree: true
       });
+      if (window.ResizeObserver) {
+        var resizeObserver = new ResizeObserver(resizeFrame);
+        resizeObserver.observe(doc.documentElement);
+        if (doc.body) resizeObserver.observe(doc.body);
+      }
     } catch (error) {
       // 동일 도메인 배포가 전제이므로 정상 운영에서는 실행되지 않습니다.
     }
