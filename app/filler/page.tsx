@@ -220,7 +220,7 @@ export default function FillerPage() {
       <section className="f-section f-doctors">
         <div className="f-shell f-doctor-grid">
           <div className="f-doctor-image motion-reveal">
-            <Image src={`${ASSET_BASE}/filler-source/detail-8.png`} alt="JJ비뇨기과 의료진 소개" fill sizes="(max-width: 900px) 100vw, 56vw" />
+            <Image src={`${ASSET_BASE}/filler-source/detail-8.webp`} alt="JJ비뇨기과 의료진 소개" fill sizes="(max-width: 900px) 100vw, 56vw" />
           </div>
           <div className="f-doctor-copy">
             <p className="f-kicker">MEDICAL TEAM</p>
@@ -260,7 +260,7 @@ export default function FillerPage() {
             </div>
           </div>
           <div className="f-map">
-            <Image src={`${ASSET_BASE}/filler-source/detail-9.png`} alt="JJ비뇨기과 오시는 길" fill sizes="(max-width: 900px) 100vw, 48vw" />
+            <Image src={`${ASSET_BASE}/filler-source/detail-9.webp`} alt="JJ비뇨기과 오시는 길" fill sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
         </div>
       </section>
